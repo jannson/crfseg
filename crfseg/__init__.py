@@ -52,47 +52,48 @@ def cut_to_tagger(line):
                     if c in sent_seg_global:
                         if str != '':
                             for cn in str:
-                                yield cn+'\tCN\tB'
+                                yield cn+'\tCN'
                         str = ''
-                        yield c+'\tFUNC\tB'
+                        yield c+'\tPUNC'
                     else:
                         str += c
                 if str != '':
                     for cn in str:
-                        yield cn+'\tCN\tB'
+                        yield cn+'\tCN'
         else:
-            yield s+'\tASCII\B'
+            yield s+'\tASCII'
 
 def cut(line):
     tagger = crf_model_global.createTagger()
     tagger.clear()
     for s in cut_to_tagger(line):
+        #print s
         tagger.add(s.encode('utf-8'))
-    tagger.add('.\tFUNC\t\S')
+    tagger.add('.\tPUNC')
     tagger.parse()
 
     size = tagger.size()
     xsize = tagger.xsize()
     str = ''
     for i in range(0, (size - 1)):
-       for j in range(0, (xsize-1)):
-           c = tagger.x(i,j).decode('utf-8')
-           tag = tagger.y2(i) 
-           #print 'test ', c,tag
-           if tag == 'B':
-               str = c
-           elif tag == 'B1' or tag == 'B2':
-                str += c
-           elif tag == 'E':
-                yield str+c
-                str = ''
-           else:
-                yield c
-                str = ''
+       #for j in range(0, (xsize-1)):
+       c = tagger.x(i,0).decode('utf-8')
+       tag = tagger.y2(i) 
+       #print 'test ', c,tag
+       if tag == 'B':
+           str = c
+       elif tag == 'B1' or tag == 'B2':
+            str += c
+       elif tag == 'E':
+            yield str+c
+            str = ''
+       else:
+            yield c
+            str = ''
     #print tagger.x(i, j) , j, "\t",
     #print tagger.x(i,0), "\t",
     #print tagger.y2(i) , "\t",
     #print "\n",
 
-for s in cut(u'1998年中国人，我们出去玩嘛'):
-    print s,
+#for s in cut(u'海运业 雄踞 全球 之 首 ， 按 吨 位计 占 世界 总数 的 １７ ％ 。'):
+#    print s,'/',
