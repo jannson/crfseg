@@ -10,14 +10,17 @@ import CRFPP
 
 
 def get_sentence_seg():
-    cutlist = " .[。，,！……!《》<>\"':：？\?、\|“”‘’；]{}（）{}【】()｛｝（）：？！。，;、~——+％%`:“”＂'‘\n\r"
-    if not isinstance(cutlist, unicode):
-        try:
-            cutlist = cutlist.decode('utf-8')
-        except UnicodeDecodeError:
-            cutlist = cutlist.decode('gbk','ignore')
+    cutlist = u" .[。，,！……!《》<>\"':：？\?、\|“”‘’；]{}（）{}【】()｛｝（）：？！。，;、~——+％%`:“”＂'‘\n\r"
     sent_seg = frozenset(cutlist)
     return sent_seg
+
+def get_stop_words():
+    the_file = os.path.dirname(os.path.abspath(__file__))
+    sent_seg = get_sentence_seg()
+    f = codecs.open(os.path.join(the_file, 'data', 'stopwords.txt'))
+    words = f.read().split('\n')
+    words += list(sent_seg)
+    return frozenset(words)
 
 def create_model(filename=None):
     if not filename:
@@ -29,6 +32,7 @@ def create_model(filename=None):
 # Share single CRF++ model
 crf_model_global = create_model()
 sent_seg_global = get_sentence_seg()
+stop_words_global = get_stop_words()
 ascii_global = re.compile('(\d+)|([a-zA-Z]+)', re.I|re.U)
 
 def create_tagger():
@@ -92,6 +96,12 @@ def tagger_cut(line, tagger):
        else:
             yield c
             str = ''
+
+#Ignore the stop words
+def cut_zh(line, tagger):
+    for x in tagger_cut(line, tagger):
+        if x not in stop_words_global:
+            yield x
 
 # Quick cut but slow in too many loop
 def cut(line):
