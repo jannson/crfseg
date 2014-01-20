@@ -23,12 +23,16 @@ def create_model(filename=None):
     if not filename:
         the_file = os.path.dirname(os.path.abspath(__file__))
         filename = os.path.join(the_file,'data','crf_seg.model')
-    crf_model =  CRFPP.Model("-m %s" % filename)
+    crf_model =  CRFPP.Model("-m %s -v 3" % filename)
     return crf_model
 
+# Share single CRF++ model
 crf_model_global = create_model()
 sent_seg_global = get_sentence_seg()
 ascii_global = re.compile('(\d+)|([a-zA-Z]+)', re.I|re.U)
+
+def create_tagger():
+    return crf_model_global.createTagger()
 
 def seg_regex(sentence):
     start = 0
@@ -63,8 +67,7 @@ def cut_to_tagger(line):
         else:
             yield s+'\tASCII'
 
-def cut(line):
-    tagger = crf_model_global.createTagger()
+def tagger_cut(line, tagger):
     tagger.clear()
     for s in cut_to_tagger(line):
         #print s
@@ -76,7 +79,6 @@ def cut(line):
     xsize = tagger.xsize()
     str = ''
     for i in range(0, (size - 1)):
-       #for j in range(0, (xsize-1)):
        c = tagger.x(i,0).decode('utf-8')
        tag = tagger.y2(i) 
        #print 'test ', c,tag
@@ -90,10 +92,13 @@ def cut(line):
        else:
             yield c
             str = ''
-    #print tagger.x(i, j) , j, "\t",
-    #print tagger.x(i,0), "\t",
-    #print tagger.y2(i) , "\t",
-    #print "\n",
 
-#for s in cut(u'海运业 雄踞 全球 之 首 ， 按 吨 位计 占 世界 总数 的 １７ ％ 。'):
+# Quick cut but slow in too many loop
+def cut(line):
+    tagger = crf_model_global.createTagger()
+    for s in  tagger_cut(line, tagger):
+        yield s
+
+#for s in cut(u'海运业雄踞全球之首 ，按吨位计占世界总数的１７％ 。'):
 #    print s,'/',
+#print '\n'
