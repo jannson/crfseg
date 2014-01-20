@@ -28,13 +28,14 @@ def test2():
 
 def test3():
     s = zerorpc.Client("tcp://0.0.0.0:3333", timeout=10000)
-    #for t in s.cut(u'你们这些人啊'):
+    #for t in s.cut_pos(u'你们这些人啊'):
     #    print t
+    #return
     with codecs.open(filename,'r','utf-8') as file:
         out = codecs.open("./crf", 'w', 'utf-8')
         for line2 in file:
             line = line2.replace('\r','')
-            cs = [c.decode('utf-8') for c in s.cut(line.encode('utf-8'))]
+            cs = [c.decode('utf-8') for c in s.cut_pos(line.encode('utf-8'))]
             out.write(' '.join(cs))
 
 #test1()

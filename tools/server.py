@@ -11,7 +11,9 @@ logging.basicConfig()
 class CrfServer(object):
     tagger = Tagger()
     def cut(self, line):
-        return [s.encode('utf-8') for s in Tagger.cut(line)]
+        return [s.encode('utf-8') for s in self.tagger.cut(line)]
+    def cut_pos(self, line):
+        return [(s[0]+'/'+s[1]).encode('utf-8') for s in self.tagger.cut_pos(line)]
 
 s = zerorpc.Server(CrfServer())
 s.bind("tcp://0.0.0.0:3333")
