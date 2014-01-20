@@ -22,21 +22,30 @@ def get_stop_words():
     words += list(sent_seg)
     return frozenset(words)
 
-def create_model(filename=None):
-    if not filename:
-        the_file = os.path.dirname(os.path.abspath(__file__))
-        filename = os.path.join(the_file,'data','crf_seg.model')
-    crf_model =  CRFPP.Model("-m %s -v 3" % filename)
-    return crf_model
+def create_model(seg_file=None, pos_file=None):
+    the_file = os.path.dirname(os.path.abspath(__file__))
+    if not seg_file:
+        seg_file = os.path.join(the_file,'data','crf_seg.model')
+    if not pos_file:
+        pos_file = os.path.join(the_file,'data','crf_pos.model')
+    seg_model = CRFPP.Model("-m %s" % seg_file)
+    pos_model = CRFPP.Model("-m %s" % pos_file)
+    return (seg_model, pos_model)
 
 # Share single CRF++ model
-crf_model_global = create_model()
+(seg_model_global, pos_model_global) = create_model()
 sent_seg_global = get_sentence_seg()
 stop_words_global = get_stop_words()
 ascii_global = re.compile('(\d+)|([a-zA-Z]+)', re.I|re.U)
 
-def create_tagger():
-    return crf_model_global.createTagger()
+#TODO move to utils.py
+def to_unicode(txt):
+    if not isinstance(txt, unicode):
+        try:
+            txt = txt.decode('utf-8')
+        except UnicodeDecodeError:
+            txt = txt.decode('gbk','ignore')
+    return txt
 
 def seg_regex(sentence):
     start = 0
@@ -46,69 +55,83 @@ def seg_regex(sentence):
         start = m.end(0)
     yield (sentence[start:], True)
 
-def cut_to_tagger(line):
-    if not isinstance(line, unicode):
-        try:
-            line = line.decode('utf-8')
-        except UnicodeDecodeError:
-            line = line.decode('gbk','ignore')
-    for s,need_cut in seg_regex(line):
-        if need_cut:
-            if s != '':
+class Tagger(object):
+    def __init__(self):
+        self.seg_ = seg_model_global.createTagger()
+        self.pos_ = pos_model_global.createTagger()
+
+    def seg(self, txt):
+        txt = to_unicode(txt)
+        for s,need_cut in seg_regex(txt):
+            if need_cut:
+                if s != '':
+                    str = ''
+                    for c in s:
+                        if c in sent_seg_global:
+                            if str != '':
+                                for cn in str:
+                                    yield cn+'\tCN'
+                            str = ''
+                            yield c+'\tPUNC'
+                        else:
+                            str += c
+                    if str != '':
+                        for cn in str:
+                            yield cn+'\tCN'
+            else:
+                yield s+'\tASCII'
+
+    def cut(self, txt):
+        tagger = self.seg_
+        tagger.clear()
+        for s in self.seg(txt):
+            #print s
+            tagger.add(s.encode('utf-8'))
+        tagger.add('.\tPUNC')
+        tagger.parse()
+
+        size = tagger.size()
+        xsize = tagger.xsize()
+        str = ''
+        for i in range(0, (size - 1)):
+           c = tagger.x(i,0).decode('utf-8')
+           tag = tagger.y2(i) 
+           #print 'test ', c,tag
+           if tag == 'B':
+               str = c
+           elif tag == 'B1' or tag == 'B2':
+                str += c
+           elif tag == 'E':
+                yield str+c
                 str = ''
-                for c in s:
-                    if c in sent_seg_global:
-                        if str != '':
-                            for cn in str:
-                                yield cn+'\tCN'
-                        str = ''
-                        yield c+'\tPUNC'
-                    else:
-                        str += c
-                if str != '':
-                    for cn in str:
-                        yield cn+'\tCN'
-        else:
-            yield s+'\tASCII'
+           else:
+                yield c
+                str = ''
+    
+    def pos(self, toks):
+        tagger = self.pos_
+        tagger.clear()
+        for tok in toks:
+            tagger.add(tok.encode('utf-8'))
+        tagger.add(".")
+        tagger.parse()
+        size = tagger.size()
+        xsize = tagger.xsize()
+        for i in range(0, (size - 1)):
+           c = tagger.x(i,0).decode('utf-8')
+           tag = tagger.y2(i) 
+           yield (c, tag)
 
-def tagger_cut(line, tagger):
-    tagger.clear()
-    for s in cut_to_tagger(line):
-        #print s
-        tagger.add(s.encode('utf-8'))
-    tagger.add('.\tPUNC')
-    tagger.parse()
+    def cut_pos(self, txt):
+        toks = self.cut(txt)
+        return self.pos(toks)
 
-    size = tagger.size()
-    xsize = tagger.xsize()
-    str = ''
-    for i in range(0, (size - 1)):
-       c = tagger.x(i,0).decode('utf-8')
-       tag = tagger.y2(i) 
-       #print 'test ', c,tag
-       if tag == 'B':
-           str = c
-       elif tag == 'B1' or tag == 'B2':
-            str += c
-       elif tag == 'E':
-            yield str+c
-            str = ''
-       else:
-            yield c
-            str = ''
+    def cut_filter(self, txt, stopwords=stop_words_global):
+        for x in self.cut(txt):
+            if x not in stop_words_global:
+                yield x
 
-#Ignore the stop words
-def cut_zh(line, tagger):
-    for x in tagger_cut(line, tagger):
-        if x not in stop_words_global:
-            yield x
-
-# Quick cut but slow in too many loop
-def cut(line):
-    tagger = crf_model_global.createTagger()
-    for s in  tagger_cut(line, tagger):
-        yield s
-
-#for s in cut(u'海运业雄踞全球之首 ，按吨位计占世界总数的１７％ 。'):
-#    print s,'/',
+#tagger = Tagger()
+#for s in tagger.cut_filter(u'海运业雄踞全球之首 ，按吨位计占世界总数的１７％ 。'):
+#    print s,
 #print '\n'
