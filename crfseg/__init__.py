@@ -37,6 +37,7 @@ def create_model(seg_file=None, pos_file=None):
 sent_seg_global = get_sentence_seg()
 stop_words_global = get_stop_words()
 ascii_global = re.compile('(\d+)|([a-zA-Z]+)', re.I|re.U)
+space_global = re.compile('[\s\t\r\n]+', re.I|re.U)
 
 #TODO move to utils.py
 def to_unicode(txt):
@@ -50,6 +51,14 @@ def to_unicode(txt):
 def seg_regex(sentence):
     start = 0
     for m in ascii_global.finditer(sentence):
+        yield (sentence[start:m.start(0)], True)
+        yield (sentence[m.start(0):m.end(0)], False)
+        start = m.end(0)
+    yield (sentence[start:], True)
+
+def space_regex(sentence):
+    start = 0
+    for m in space_global.finditer(sentence):
         yield (sentence[start:m.start(0)], True)
         yield (sentence[m.start(0):m.end(0)], False)
         start = m.end(0)
@@ -81,7 +90,7 @@ class Tagger(object):
             else:
                 yield s+'\tASCII'
 
-    def cut(self, txt):
+    def cut2(self, txt):
         tagger = self.seg_
         tagger.clear()
         for s in self.seg(txt):
@@ -107,6 +116,16 @@ class Tagger(object):
            else:
                 yield c
                 str = ''
+
+    def cut(self, txt):
+        for s,need_cut in space_regex(txt):
+            if need_cut:
+                #print s, ' NEED'
+                if s != "":
+                    for c in self.cut2(s):
+                        yield c
+            else:
+                yield s
     
     def pos(self, toks):
         tagger = self.pos_
