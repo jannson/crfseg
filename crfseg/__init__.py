@@ -10,7 +10,7 @@ import CRFPP
 
 
 def get_sentence_seg():
-    cutlist = u" .[。，,！……!《》<>\"':：？\?、\|“”‘’；]{}（）{}【】()｛｝（）：？！。，;、~——+％%`:“”＂'‘\n\r"
+    cutlist = u" .[。，,！……*!《》<>\"':：？\?、\|“”‘’；]{}（）{}【】()｛｝（）：？！。，;、~——+％%`:“”＂'‘\n\r"
     sent_seg = frozenset(cutlist)
     return sent_seg
 
