@@ -5,8 +5,8 @@ import re
 import os
 import codecs
 import cppjiebapy
-import crfseg
 import zerorpc
+from crfseg import Tagger
 
 filename = '/opt/projects/svn_source/people/icwb2-data/testing/msr_test.utf8'
 
@@ -38,6 +38,23 @@ def test3():
             cs = [c.decode('utf-8') for c in s.cut_pos(line.encode('utf-8'))]
             out.write(' '.join(cs))
 
+def test4():
+    corpus = [u'SCANV网址安全中心(http://scanv.com)是一个综合性的网址安全服务平台。通过网址安全中心，用户可以方便的查询到要访问的网址是否存在恶意行为，同时可以在SCANV中在线举报曝光违法恶意网站。',
+            u'工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作',]
+
+    tagger = Tagger()
+    for str in corpus:
+        print '\nCPPJIEBA:'
+        for s in tagger.pos(list(cppjiebapy.cut(str))):
+            print s[0],'/',s[1], " ",
+
+        print '\nCRF:'
+        for s in tagger.cut_pos(str):
+            print s[0],'/',s[1], " ",
+        print '\n'
+
 #test1()
 #test2()
-test3()
+#test3()
+test4()
+
