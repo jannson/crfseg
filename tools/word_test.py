@@ -52,9 +52,14 @@ def test4():
         for s in tagger.cut_pos(str):
             print s[0],'/',s[1], " ",
         print '\n'
-
+def test5():
+    trans = zerorpc.Client("tcp://0.0.0.0:3333", timeout=10000)
+    s = u'飛起來'
+    s = trans.trad2simp(s.encode('utf-8'))
+    print s
 #test1()
 #test2()
 #test3()
-test4()
+#test4()
+test5()
 

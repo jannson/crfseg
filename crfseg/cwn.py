@@ -3,9 +3,11 @@
 
 """ Chinese Wordnet """
 
-import MySQLdb, codecs, sys, os
+import codecs, sys, os
+#import MySQLdb
 import sqlite3
 from opencc import OpenCC, DictType
+import re
 
 path1 = ['simp_to_trad_characters.ocd', 'simp_to_trad_phrases.ocd']
 path2 = ['trad_to_simp_characters.ocd', 'trad_to_simp_phrases.ocd']
@@ -71,7 +73,7 @@ class Synset(object):
            selfId = lemmaId[0][0] + iden[-4:]
        else: # 詞義
            selfId = lemmaId[0][0] + iden[-4:-2]
-       #print selfId
+       print 'selfid ', selfId
        cursor.execute("SELECT synonym_word, ref_id FROM cwn_synonym WHERE cwn_id ='"+selfId+"' UNION SELECT synonym_word, ref_id FROM cwn_synotmp WHERE cwn_tmpid ='"+selfId+"' UNION SELECT var_word, ref_id FROM cwn_vartmp WHERE cwn_tmpid ='"+selfId+"' UNION SELECT var_word, ref_id FROM cwn_vartmp WHERE cwn_tmpid ='"+selfId+"'");
        all_tuple = cursor.fetchall()
        #print all_tuple # (u'\u524d\u65b9', u'0100')
@@ -135,7 +137,7 @@ class Synset(object):
             lemmaName = a[:-6]
             refId = a[-4:-2]
             ###############  找出sense_id  ###########################################   
-            cursor.execute("SELECT lemma_id FROM lemma WHERE cwn_lemma = '"+lemmaName+"'")
+            cursor.execute("SELECT lemma_id FROM cwn_lemma WHERE cwn_lemma = '"+lemmaName+"'")
             lemmaId = cursor.fetchall()
             #print lemmaId  #((u'070301',),) type:unicode
             senseid = lemmaId[0][0] + refId
@@ -347,7 +349,7 @@ class Sense(object):
         self.name = lemmaName
         
         #################################### PRONUNCIATION, KEY(SENSE_ID) ##################
-        cursor.execute("SELECT cwn_pinyin, cwn_zhuyin, lemma_id FROM lemma WHERE cwn_lemma = '"+lemmaName+"'")
+        cursor.execute("SELECT cwn_pinyin, cwn_zhuyin, lemma_id FROM cwn_lemma WHERE cwn_lemma = '"+lemmaName+"'")
         sound_key = cursor.fetchall()
         self.pinyin = sound_key[0][0]#.encode('utf8') #加不加?
         #print self.pinyin
@@ -408,6 +410,7 @@ class Sense(object):
         ################################## PARONYMS ######################################
         """iden='晨間.n.0100'"""
         # attributes 及 methods 的差別?  
+        ''' TODO what is it?
         cursor.execute("SELECT paranym_word, ref_id FROM cwn_paranym WHERE cwn_id ='"+senseId+"' UNION SELECT paranym_word, ref_id FROM cwn_paranymtmp WHERE cwn_tmpid ='"+senseId+"'")
         all_tuple = cursor.fetchall()
         #print all_tuple # (u'\u524d\u65b9', u'0100')
@@ -422,6 +425,7 @@ class Sense(object):
             for a in paronym:
                 paronyms.append(a[:-5]+iden[-6]+a[-5:])      
         self.paronyms = paronyms
+        '''
 
 
 ###################################################################################
@@ -436,7 +440,7 @@ class Facet(object):
         self.name = lemmaName
 
         #################################### PRONUNCIATION, KEY(SENSE_ID) ##################
-        cursor.execute("SELECT cwn_pinyin, cwn_zhuyin, lemma_id FROM lemma WHERE cwn_lemma = '"+lemmaName+"'")
+        cursor.execute("SELECT cwn_pinyin, cwn_zhuyin, lemma_id FROM cwn_lemma WHERE cwn_lemma = '"+lemmaName+"'")
         sound_key = cursor.fetchall()
         self.pinyin = sound_key[0][0]#.encode('utf8') #加不加?
         #print self.pinyin
@@ -606,21 +610,182 @@ def synsets(userInput):
      #   synsets.append(Synset(idenn))
     #return synsets
 
-if __name__ == "__main__":
-    s = '命运'
-    s = simp2trad(s)+'.n.0100'
-    set_tmp = Synset(iden=s)
+def test1():
+    iden = '看见'
+    iden = simp2trad(iden)+'.n.0100'
+    print 'iden ', iden
+    #iden = '真1.v.0310'   #lemma---------antonyms()
+    #iden = '骯髒.v.0101'  #facet---------antonyms() + senses
+    #iden = '不加.d.0100'  #--------------hypernyms() + senses
+    #iden = '勿.d.0200'    #--------------hyponyms()
+    #iden = '代1.n.0810'   #--------------holonyms()
+    #iden = '朝代.n.0100'  #--------------meronyms()
+    #iden = '晨間.n.0100'
+    #iden = '是2.i.0200'
+    set_tmp = Synset(iden=iden)
     print set_tmp.id
     print set_tmp.lemma
     print set_tmp.definition
+    print 'sense ',
     for s in set_tmp.senses:
         print s, " ",
     print '\n'
-    print 'antonyms', set_tmp.antonyms()
-    print set_tmp.hypernyms()
-    print set_tmp.hyponyms()
+    print 'antonyms', 
+    for s in set_tmp.antonyms():
+        print s, " ",
+    print '\nhypernyms',
+    for s in set_tmp.hypernyms():
+        print s, " ",
+    print '\nhyponyms',
+    for s in set_tmp.hyponyms():
+        print s, " ",
+    print '\n'
     print set_tmp.holonyms()
     for s in set_tmp.meronyms():
         print s, " ",
     print '\n'
 
+    print 'Begin sense'
+    sen = Sense(iden=iden)
+    print trad2simp(sen.name), sen.key, sen.pinyin, sen.zhuyin, sen.definition, sen.domain, sen.wn_trans
+    print '\nexamples ',
+    for s in sen.examples:
+        print s, " ",
+    #print sen.paronyms
+
+import datrie
+import zerorpc
+
+def test2():
+   trans = zerorpc.Client("tcp://0.0.0.0:3333", timeout=10000)
+   en_word_re = re.compile(r'[a-zA-Z]+', re.I|re.U)
+   trie = datrie.Trie(ranges=[('0','9'), (u'\u4e00', u'\u9fff')])
+   synos_dict = {}
+   sens_dict = {}
+   groups = []
+   logfile = codecs.open('zzz', 'w', 'utf-8')
+
+   select = "SELECT cwn_id, synonym_word, ref_id FROM cwn_synonym UNION SELECT cwn_tmpid, synonym_word, ref_id FROM cwn_synotmp UNION SELECT cwn_id, var_word, ref_id FROM cwn_varword UNION SELECT cwn_tmpid, var_word, ref_id FROM cwn_vartmp"
+   all_synos = []
+   for s in select.split('UNION'):
+       cursor.execute(s)
+       all = cursor.fetchall()
+       all_synos += all
+   #cursor.execute("SELECT cwn_id, synonym_word, ref_id FROM cwn_synonym UNION SELECT cwn_tmpid, synonym_word, ref_id FROM cwn_synotmp UNION SELECT cwn_id, var_word, ref_id FROM cwn_varword UNION SELECT cwn_tmpid, var_word, ref_id FROM cwn_vartmp")
+   #cursor.execute("SELECT cwn_id, synonym_word, ref_id FROM cwn_synonym")
+   #all_synos = cursor.fetchall()
+   print 'len ', len(all_synos)
+   for syno in all_synos:
+       senseid = syno[0]
+       cursor.execute("SELECT lemma_id, cwn_lemma FROM cwn_lemma WHERE cwn_lemma = '"+syno[1]+"'")
+       sy = cursor.fetchall() # 6 digits
+       if len(sy) == 0 or not syno[2]:
+           continue
+       sy_sense = sy[0][0]
+       sy_sense += syno[2]
+       cursor.execute("SELECT pos FROM pos WHERE cwn_id = '"+sy_sense+"' UNION SELECT pos FROM pos_tmp WHERE cwn_tmpid = '"+sy_sense+"'")
+       tag = cursor.fetchall()
+       pos = '?'
+       if len(tag) > 0:
+           pos = tag[0][0].lower()
+       #print sy_sense, syno[1], pos
+       sy = (sy_sense, syno[1], pos)
+       if senseid in synos_dict:
+           synos_dict[senseid].append(sy)
+       else:
+           cursor.execute("SELECT cwn_lemma FROM cwn_lemma WHERE lemma_id = '"+senseid[:6]+"'")
+           lemma = cursor.fetchall()
+           if len(lemma) == 0:
+               synos_dict[senseid] = [sy]
+               continue
+           this_name = lemma[0][0]
+           cursor.execute("SELECT pos FROM pos WHERE cwn_id = '"+senseid+"' UNION SELECT pos FROM pos_tmp WHERE cwn_tmpid = '"+senseid+"'")
+           tag = cursor.fetchall()
+           this_pos = '?'
+           if len(tag) > 0:
+               this_pos = tag[0][0].lower()
+           #print senseid, this_name, this_pos
+           this_word = (senseid, this_name, this_pos)
+           synos_dict[senseid] = [this_word, sy]
+   for senseid in synos_dict.keys():
+       synos = synos_dict[senseid]
+       group = -1
+       for word in synos:
+           if word[0] in sens_dict:
+               group = sens_dict[word[0]]
+               break
+       if group == -1:
+           group = len(groups)
+           groups.append([])
+
+       for word in synos:
+           if word[0] in sens_dict and sens_dict[word[0]] != group:
+               logfile.write(u'WARNING %s %d' % (word[1], group))
+           if word[0] not in sens_dict:
+               sens_dict[word[0]] = group
+               groups[group].append(word)
+   i = 0
+   for g in groups:
+       logfile.write(u"\n\ngroup %d: " % i)
+       for w in g:
+           logfile.write(u" (%s,%s,%s) " % (w[0], trans.trad2simp(w[1].encode('utf-8')).decode('utf-8'), w[2]))
+       i += 1
+
+def test3():
+   trans = zerorpc.Client("tcp://0.0.0.0:3333", timeout=10000)
+   en_word_re = re.compile(r'[a-zA-Z]+', re.I|re.U)
+   sens = {}
+   trie = datrie.Trie(ranges=[('0','9'), (u'\u4e00', u'\u9fff')])
+
+   cursor.execute("SELECT lemma_id, cwn_lemma FROM cwn_lemma")
+   lemmas = cursor.fetchall() # 6 digits
+   for lem in lemmas:
+       print 'lem', lem[1]
+       cursor.execute("SELECT sense_id FROM cwn_sense UNION SELECT sense_tmpid FROM cwn_sensetmp")
+       sns = cursor.fetchall()
+       for sn in sns:
+           senseid = sn[0]
+           cursor.execute("SELECT pos FROM pos WHERE cwn_id = '"+senseid+"' UNION SELECT pos FROM pos_tmp WHERE cwn_tmpid = '"+senseid+"'")
+           tag = cursor.fetchall()
+           pos = '?'
+           if len(tag) > 0:
+               pos = tag[0][0].lower()
+           print 'pos', pos
+           word = [lem[0], lem[1], sn[0], pos]
+           selfId = senseid
+           cursor.execute("SELECT synonym_word, ref_id FROM cwn_synonym WHERE cwn_id ='"+selfId+"' UNION SELECT synonym_word, ref_id FROM cwn_synotmp WHERE cwn_tmpid ='"+selfId+"' UNION SELECT var_word, ref_id FROM cwn_vartmp WHERE cwn_tmpid ='"+selfId+"' UNION SELECT var_word, ref_id FROM cwn_vartmp WHERE cwn_tmpid ='"+selfId+"'");
+           synos = cursor.fetchall()
+           sense1 = []
+           print synos
+           if len(synos) != 0:
+               for tup in synos:
+                   if not tup[1]:
+                       continue
+                   member = tup[0]+'..'+ tup[1]
+                   sense1.append(member)
+           #### insert pos tag
+           pos = []
+           for a in sense1:
+               lemmaName = a[:-6]
+               refId = a[-4:-2]
+               ###############  找出sense_id  ###########################################   
+               cursor.execute("SELECT lemma_id FROM cwn_lemma WHERE cwn_lemma = '"+lemmaName+"'")
+               lemmaId = cursor.fetchall()
+               #print lemmaId  #((u'070301',),) type:unicode
+               if len(lemmaId) <= 0:
+                   continue
+               senseid = lemmaId[0][0] + refId
+               cursor.execute("SELECT pos FROM pos WHERE cwn_id = '"+senseid+"' UNION SELECT pos FROM pos_tmp WHERE cwn_tmpid = '"+senseid+"'")
+               tag = cursor.fetchall()
+               if len(tag) == 0:
+                   pos = '?'
+               else:
+                   pos.append(tag[0][0][0].lower())
+           index = [a.find('.') for a in sense1]
+           senses = []
+           for n in range(len(pos)):
+               senses.append(sense1[n][:index[n]+1]+pos[n]+sense1[n][index[n]+1:])
+       break
+
+if __name__ == "__main__":
+   test2()

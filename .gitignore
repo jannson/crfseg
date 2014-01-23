@@ -38,4 +38,5 @@ nosetests.xml
 origin/*
 *.pkl
 crfseg/data/crf_pos.model
+zzz
 
