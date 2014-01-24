@@ -3,6 +3,7 @@
 一则cbb 一来cbb
 一同d 一并d 一块d 相互d 一块儿d 共同d 一起d
 一味d 一昧d
+一定a 常a
 一定a 相当a
 一定vh 相当vh 特定vh 具体vh
 一家子nh 家人nh 合家nh 阖家nh
@@ -20,19 +21,17 @@
 丁na 夫na 男人na
 七neu 柒neu
 万万d 万d
-丈夫na 夫na 先生na
 丈夫na 夫na 先生na 婿na
 三neu 参neu
-上ncd 上面ncd 以上ncd
 上va 上去va
 上vc 附vc 附身vc
 上vcl 上去vcl
 上升va 升va
 上海na 沪na
 上海nb 沪nb
+上班va 上va
+上课va 上va
 做vc 作出vc 作vc 做出vc
-压vc 押vc
-下面ncd 下ncd
 下面ncd 下ncd 稍后ncd 以下ncd
 不仅cbb 不仅仅cbb 不祇cbb 不但cbb 不单单cbb 不止cbb 不光cbb 不只cbb 不单cbb 非但cbb 不啻cbb
 不仅da 不仅仅da 不祇da 不止da 不光da 不只da
@@ -43,10 +42,8 @@
 不大dfa 不太dfa
 不必d 甭d 不要d 不用d
 不断vh 不停vh 不止vh 不已vh
-不易vh 难vh
 不止? 不只?
 不法a 违法a 非法a
-不消说dk 不用说dk
 不然cbb 要不cbb 要不然cbb
 不禁vl 禁不住vl 不由自主vl
 不经意d 无意d
@@ -79,9 +76,7 @@
 丢vc 拽vc 扔vc 掷vc
 两造nh 双方nh
 严d 严峻d
-严d 紧d
 严vh 严峻vh
-严vh 紧vh
 严格d 密切d 严d 紧d 密d
 严格vh 严vh 紧vh 严峻vh
 严重vh 深vh 重vh 严峻vh
@@ -99,7 +94,6 @@
 中国nc 大陆nc 中nc 华nc
 中国式a 中式a
 中央ncd 中ncd
-中文na 中na
 中视na 中国电视公司na
 中视nc 中国电视公司nc
 中间ncd 中ncd 当中ncd 之中ncd
@@ -128,18 +122,14 @@
 义a 干a
 义na 义大利na 意na
 义na 价值na 含意na 意义na 意na
-义na 意na
 义nb 义大利nb 意nb
 义nc 义大利nc 意nc
 之de7 的de7
-之上ncd 上ncd 上面ncd
 之上ncd 上ncd 上面ncd 以上ncd
 之下ncd 下ncd
-之下ncd 下面ncd 下ncd
 之下ncd 下面ncd 下ncd 以下ncd
 之下ng 下ng
 之后ncd
-之所以cbb 所以cbb
 之类cab 等等cab 的cab
 乌龟na 龟na
 乐na 音乐na
@@ -149,9 +139,7 @@
 乘vc 乘坐vc 搭vc 坐vc
 乘vc 乘坐vc 搭vc 打vc 坐vc
 乘vc 坐vc
-乘vc 搭vc
 乘vc 搭vc 抟vc
-乘vc 盛vc
 乘vc 盛vc 装vc
 乘vj 的vj
 乙neu 一neu 壹neu
@@ -161,13 +149,11 @@
 也好t 也罢t
 习na 习惯na
 习na 惯na 俗na
-习惯vl 惯vl
 乡na 家乡na 家园na 土na
 买vc 卖vc
 乱d 浑d 胡d 任意d 胡乱d
 乱d 胡乱d 草d 草率d 简单d
 乱vc 破坏vc
-乱vc 闹vc
 乱vc 闹vc 捣vc
 乳a 幼a
 乳na 奶na
@@ -184,7 +170,6 @@
 事vc 侍vc
 事先d 预d 逆d
 事实na 实际na
-于p
 亏vc 糗vc
 云nc 滇nc
 云vk 曰vk 谓vk 说vk
@@ -234,7 +219,6 @@
 介nom 介绍nom
 介ve 介绍ve
 介ve 进ve 介绍ve
-介vj 介于vj
 仍旧d 依然d 仍d 依旧d 仍然d 犹d 还d 尚d
 从未d 未曾d 从不d
 仔细d 详d 细d 详细d 精d
@@ -245,7 +229,6 @@
 付va 付费va
 付出vc 付诸vc
 仙a 神a
-代na 朝na
 代na 朝na 朝代na
 代p 替p
 代为d 代d
@@ -253,7 +236,6 @@
 代谢na 新陈代谢na
 代谢nom 新陈代谢nom
 代谢vh 新陈代谢vh
-以p 拿p
 以p 照p 根据p 按p 案p 视p 就p 依照p 依据p 依p 按照p
 以便cbb 好cbb
 以免cbb 防止cbb 以防cbb
@@ -301,7 +283,6 @@
 伟大na 伟na
 伟大vh 伟vh
 传vd 传授vd
-传vd 传给vd
 传vd 传送vd
 传vk 流传vk
 传媒na 大众传播na 媒体na 传播na
@@ -314,13 +295,10 @@
 传递vd 传vd 传给vd
 传递vd 递vd
 传道vb 传教vb
-伤vc 伤害vc
-伤vhc 伤害vhc
 伤感na 感伤na
 伤感nom 感伤nom
 伤感vh 感伤vh
 伪na 假na
-伪vh 假vh
 伪vh 假vh 仿vh
 估va 估价va 评估va
 估vb 估价vb
@@ -328,19 +306,16 @@
 伴随vc 伴vc
 伴随vf 伴vf
 伸手va 插va
-似乎d 好像d
 似乎d 好像d 仿佛d
 似乎d 好像d 似d
 似乎d 恍d 好像d 仿佛d
 似的ng 似ng 似地ng
-位na 座na
 位na 数位na
 位置nc 处nc
 低声d 悄悄d 轻声d 低d
 住宅na 宅na
 住宿nom 宿nom
 住宿va 宿va
-体na
 体na 体制na
 体nc
 体会vk 体vk
@@ -357,7 +332,6 @@
 作出vc 做出vc
 作案nom 犯案nom
 作案va 犯案va
-作梦vc 做vc 作vc
 作梦vc 做vc 作vc 梦vc
 作答nom 回答nom 答nom
 作答ve 回答ve 答ve
@@ -376,7 +350,6 @@
 供vc 招vc
 供vd 供给vd
 供vf 养vf
-依p 照p
 依据na 本na 根据na
 依据p 本p 根据p
 依赖nom 仰赖nom
@@ -392,7 +365,6 @@
 便是d 就d 就是d 便d 是d
 便是d 就d 而d 便d
 便是va 就是va
-促vf 催vf
 促vf 敦促vf 催vf 催促vf
 促进vk 带动vk
 俄na 俄罗斯na
@@ -406,11 +378,8 @@
 保护vc 护vc
 保持nom 维系nom 维持nom
 保证ve 包ve 保ve
-保险na 保na
 保险ve 保证ve
 信vk 相信vk
-修改vc 修vc
-修理vc 修vc
 修行va 修va
 倍d 加倍d
 倍va 加倍va
@@ -440,8 +409,6 @@
 偏离vj 偏vj
 偏远vh 穷vh 偏vh
 做vc 举行vc 作vc 举办vc
-做vc 作vc
-做vc 作出vc 作vc 做出vc
 做vc 充vc 作vc
 做vc 弄vc 行vc 干vc 闹vc 为vc 作vc 进行vc
 做成vg 作成vg
@@ -481,16 +448,12 @@
 免d 甭d 不要d 不用d
 兔na 兔子na
 入va 进来va 加入va 进去va 进入va 进va
-入vcl 进入vcl
 全d 全然d 彻底d 完全d
 全vh 完vh 完全vh
 全球nc 天下nc 世界nc
 八neu 捌neu
-公na 爷na
-公na 雄na
 公公na 寺na
 公公na 舅na 公na
-公布ve
 公用a 公共a
 公社nb 人民公社nb
 公诸于世vb 传世vb
@@ -505,7 +468,6 @@
 共nb 中共nb
 共vj 分享vj
 关vc 关门vc 闭vc 关闭vc
-关vc 关闭vc
 关vc 闭vc 关闭vc
 关于p
 关系a 相关a
@@ -521,7 +483,6 @@
 养vc 育vc
 兼职nom 兼任nom
 兼职va 兼va 兼任va
-内ncd 内部ncd 之内ncd 以内ncd 中ncd 里ncd 里头ncd 里面ncd
 内ng 之内ng 以内ng 中ng 里ng 里头ng 里面ng
 内行vh 在行vh
 冈na 岗na
@@ -549,9 +510,7 @@
 冬nd 冬季nd
 冰vh 冻vh
 冰雪na 雪na
-冲va
 冲va 奋斗va 拼va 打拼va
-冲vc
 冲vc 洗vc
 决定ve 决ve
 决心vf 决意vf
@@ -565,13 +524,10 @@
 减低nom 降低nom 下降nom
 减低nom 降低nom 减轻nom 减弱nom 减少nom
 减低va 掉va 降低va 降va 跌va 下降va 落va
-减低va 降低va
 减低va 降低va 减轻va 减弱va 减少va
-减低vc 降低vc
 减低vc 降低vc 削vc 减vc 削减vc 减轻vc 减少vc 减弱vc
 减低vh 降低vh
 减低vhc 降低vhc
-减缓vh 缓和vh
 减至vj 降到vj 降至vj
 减轻nom 减少nom
 几d 几乎d 近乎d
@@ -581,11 +537,9 @@
 凶a
 凶na
 凶vc
-凶vh
 凸显vj 突显vj
 出va 出版va
 出vc 泄vc 发泄vc
-出来va 出va
 出来va 出va 出去va
 出来va 出去va
 出来vh 外面vh 出去vh
@@ -601,7 +555,6 @@
 分别d 分头d
 分别nom 分nom
 分成vg 划分为vg 分为vg 画成vg 分vg
-分手vc 切vc 分vc
 分担vc 分vc
 分析na 剖析na
 分析nom 剖析nom
@@ -620,7 +573,6 @@
 列入vg 列为vg
 列入vj 列为vj
 列出来vc 列出vc 列vc
-则d 就d
 则d 就d 即d 便d
 则dk 那dk 那么dk
 刚vh 傲vh
@@ -635,7 +587,6 @@
 创na 伤na
 创va 伤va
 创vc 做vc 作vc
-创vc 创造vc
 创vc 建vc 建立vc
 判nom 判决nom
 判ve 判决ve
@@ -652,7 +603,6 @@
 别人nh 他人nh
 到p 于p
 到vcl 走到vcl 上vcl 徂vcl
-到vcl 达vcl
 到处d 四处d
 到时候d 届时d
 制服vc 制伏vc
@@ -670,7 +620,6 @@
 剉na 挫na
 剉va 挫va 抖va
 剉vc 刨vc 挫vc
-剉vc 挫vc
 剉vc 挫vc 上vc 解vc
 剉vh 吓vh 挫vh
 削vc 免vc
@@ -678,15 +627,12 @@
 削vc 削减vc
 削vj 免vj
 前a 前任a
-前ncd 前面ncd
-前nd 前面nd
 前nes 前任nes
 前nes 前面nes
 前方ncd 前ncd 前面ncd
 剩vj 剩余vj 剩下vj
 割vc 拆vc 分手vc 切vc 分vc
 力na 力量na
-力na 劲na
 力na 劲na 力量na
 力na 劲na 功能na
 力na 能力na
@@ -701,10 +647,8 @@
 加nb 加拿大nb
 加nc 加拿大nc
 加vc 压vc
-加vc 添vc
 加vc 添vc 饶vc
 加上cbb 兼cbb 加以cbb
-加上vc 加vc
 加上vc 加vc 的vc 加入vc
 加压vb 施压vb
 加油nom 打气nom
@@ -742,7 +686,6 @@
 包围nom 环绕nom
 包围vc 包vc
 包括vj 含vj 涵盖vj 含有vj 包含vj
-化成vg 化为vg
 化成vg 化为vg 转为vg 转成vg 转化为vg
 化石燃料na 石化燃料na
 化装nom 化妆nom
@@ -750,7 +693,6 @@
 北京nb 中nb 京nb 华nb 大陆nb 中共nb 中国nb 北平nb
 北京nb 京nb
 北方a 北a
-北方ncd 北ncd
 北方ncd 北ncd 北部ncd
 匙na 钥na
 匠na 作na
@@ -758,7 +700,6 @@
 匪vg 非vg
 匹nf 疋nf
 医na 医学na
-医na 医师na 医生na
 医na 医师na 医生na 先生na
 医na 医生na
 医vc 修理vc 修vc
@@ -771,7 +712,6 @@
 千neu 仟neu
 千万d 切d
 升级vh 增高vh
-升高va
 午nd 午间nd
 午后nd
 华nb 中nb 中华民国nb
@@ -792,7 +732,6 @@
 博物馆na 博物院na
 博物馆nc 博物院nc
 占vc 占领vc 略vc 据vc
-占vj
 占vj 占有vj 据vj
 卡dfa 较dfa 比较dfa
 卡na 脚na 角na 角色na 腿na
@@ -815,8 +754,6 @@
 危vh 危险vh 险vh
 危vh 殆vh
 危vhc 危害vhc 有害vhc
-卷na
-卷na 书na
 卷na 编na
 卷nf
 厂na 工厂na
@@ -824,8 +761,6 @@
 历史na 史na
 历史nb 史nb
 厉害vh 可以vh
-压vc 押vc
-压vc 镇vc
 压力na 压na
 厝na 户na
 原始a 原a
@@ -837,7 +772,6 @@
 去d 来d 而d
 去va 滚va
 去va 过关va 闯va
-去va 过去va
 去va 过去va 过va
 参vc 参加vc 预vc 参与vc 尬vc 掺vc
 参vc 掺vc
@@ -855,23 +789,19 @@
 反而cbb 反倒cbb
 发va 发声va 发出va 吭va
 发vc 动vc
-发vc 发出vc
 发vc 发出vc 发放vc 放vc
 发vc 发声vc 发出vc
 发vc 发行vc
 发vc 发表vc
 发vc 撒vc 使出vc 使vc
 发vc 立vc
-发vd 发出vd
 发vd 发出vd 发放vd
 发vd 发送vd 送vd 发出vd
 发vj 动vj
 发vj 立vj
 发出va 发芽va 萌va 发va 萌芽va 抽va
 发布nom 公布nom
-发布ve 公布ve
 发挥vj 施vj 使vj 显vj
-发放vc 放vc
 发放vd 流放vd 放vd
 发现vc 揭vc
 发生vj 生vj
@@ -879,12 +809,10 @@
 取代vc 取vc
 取决vi 取vi
 取胜nom 胜nom
-受vj 受到vj
 受困于vcl 陷vcl
 受困于vi 陷vi
 变na 变化na
 变vhc 变化vhc 变得vhc 转变vhc
-变化nom 转变nom
 叙na 敍na 前言na
 叙nb 敍nb
 叙nc 敍nc
@@ -899,7 +827,6 @@
 另外cbb 另cbb
 另外nes 另nes
 另行d 另外d 另d
-叩vc 扣vc
 叩vc 扣vc 敲vc
 只da 祇da
 只好d 只得d
@@ -915,21 +842,18 @@
 可惜vj 惜vj
 可是d 可d
 可能na 可能性na 希望na 机会na
-台na
 台na 柜na
 台nb 台大nb
 台nf
 台vh
 台中县nc
 台北na
-台北nb
 台北nc 北nc
 台北县nc
 台北市nb 北市nb 台北nb
 台北市nc 北市nc 北nc 台北nc
 台南na
 台南nc 南nc
-台大nb
 台大nc
 台湾na
 台湾省nc
@@ -941,7 +865,6 @@
 叹ve 抱怨ve
 吁ve 呼ve 呼吁ve
 吃vc 凌vc
-吃vc 咬vc
 吃vc 咬vc 嚼vc
 吃vc 喝vc
 吃下vb 吃下去vb
@@ -962,7 +885,6 @@
 吉a 祥a 禧a
 吊nf
 吊va 悬va
-吊vc 悬vc
 同事na 同仁na
 同时cbb 而且cbb 并且cbb 且cbb 并cbb 甚且cbb
 同样d 也d 亦d
@@ -970,17 +892,13 @@
 名列vc 列vc
 名列vg 列vg
 名叫vg 名为vg
-名字na 名na
 名字na 名na 名称na
-后ncd
-后nes
 后代na 子孙na 裔na 后na
 后悔vh 悔vh
 后方ncd 后面ncd 后ncd
 后现代主义na 后现代na
 后者nh
 后面ncd 反ncd 背ncd 后ncd
-后面ncd 后ncd
 后面nd 后nd
 后面nes 后nes
 吐vc 倾vc
@@ -993,7 +911,6 @@
 吞下去vc 吞下vc 吞vc
 含vc 悬vc
 含vj 悬vj
-听vc 聆vc
 听ve 聆ve
 听到ve 听见ve
 启va 收va
@@ -1001,7 +918,6 @@
 吸vc 吸食vc
 吸vc 抽vc
 吸vj 吸引vj
-吸烟va
 吸纳nom 吸收nom
 吸纳vc 吸收vc
 吹vc 刮vc
@@ -1020,15 +936,11 @@
 呐t 哪t
 呐va 发声va
 呐ve 喊ve 呼ve
-员na 人na
 员na 成员na
 呜呼vh 哀哉vh 呜呼哀哉vh
 呢t 吗t
 周旋nom 回旋nom
-周旋vb
-周旋vb 回旋vb
 周旋vb 回旋vb 回vb
-周知vi
 周知vi 公告周知vi
 呱d 叽d
 味na 滋na
@@ -1050,10 +962,8 @@
 咳nom 嗽nom
 咳va 嗽va
 哀d 悲d
-哀nom 悲nom
 哀nom 悲nom 难过nom
 哀vc 悲悯vc 悲vc
-哀vh 悲vh
 哀vh 悲vh 难过vh
 品na 东西na 物na
 品na 品质na 质na
@@ -1069,8 +979,6 @@
 哈萨克语na 哈萨克文na
 响vh 有名vh
 哑vh 沙vh 沙沙vh
-哥哥na 哥na
-哥哥na 哥na 兄na
 哥哥na 哥na 兄na 昆na
 哩nf 迈nf
 哪里i 那儿i 岂敢i 那里i
@@ -1138,10 +1046,8 @@
 国家na 国na
 国际na 全球na 天下na 世界na 世na
 图画na 图na
-圈na 圈子na
 圈na 圈子na 匝na
 圈vc 围起来vc 围vc 围起vc
-在p 于p
 在p 于p 乎p
 在vcl 于vcl
 在vk 在于vk
@@ -1203,7 +1109,6 @@
 声浪na 呼声na
 壳na 外壳na
 壹d 一d 又d
-壹neu 一neu
 壹neu 一neu 每neu
 处于vj 位处vj 位于vj 位vj 处在vj
 处于vj 位处vj 处在vj 身处vj
@@ -1217,7 +1122,6 @@
 多vh 多多vh
 多么dfa 何其dfa 何等dfa
 多加d 多多d
-多少neqa 若干neqa
 夜nf 宿nf
 大nom 庞大nom
 大众na 公众na 民na 民众na
@@ -1249,7 +1153,6 @@
 天na 日na
 天na 穹na 空na 天空na
 天nf 日nf
-天下nc 世界nc
 天下nc 世界nc 宇宙nc
 天呀i 天哪i 天啊i
 天气na 气候na
@@ -1259,7 +1162,6 @@
 失va 消失va 灭va 熄va 泯va
 失vj 失去vj 丧失vj 丧vj
 失vj 错过vj
-头na 头部na
 头na 头部na 首na
 头na 端na
 头ncd 头部ncd
@@ -1308,22 +1210,17 @@
 妈呀i 我的妈呀i
 妙d 巧d
 妙vh 巧vh
-妹na 妹妹na
 妹na 妹妹na 女孩na 妞na
-妹妹na 女孩na
 妻na 妻子na 太太na
 妻子na 室na 妇na 太太na 妻na 房na
 姐na 姊na 姊姊na
 姑d 且d
 姑na 婆na
-委托vf
 姪na 侄na
-姿na 势na
 威胁nom 恐吓nom
 威胁vc 威胁到vc
 威胁vc 恐吓vc 吓vc
 娃na 童na 小孩na 孩na 孩子na 幼na 小孩子na
-娘na
 娘na 妈妈na 妈na
 娘na 妈妈na 母亲na 母na 妈na
 娘na 嬤na 妈na
@@ -1383,7 +1280,6 @@
 安vh 安全vh 夷vh
 安徽na 皖na
 安徽nc 皖nc
-安排vc 排vc
 安祥nom 和平nom 安详nom
 安祥vh 和平vh 安详vh
 安祥vh 安详vh
@@ -1391,7 +1287,6 @@
 官人na 官员na
 定vc 固定vc
 定vc 摄vc
-定vc 订vc
 定型化a 定型a
 实在d 实是d 真d 实d
 实在vh 切实vh
@@ -1399,11 +1294,9 @@
 实际a 实a
 实际d 实d
 宠vc 惯vc
-客na 客人na
 客户na 客na 顾客na 客人na
 宣布na
 宣布ve
-室na 房na
 宫na 宫殿na
 宫na 馆na
 宫nc 故宫博物院nc 故宫nc
@@ -1416,7 +1309,6 @@
 容na 色na 貌na
 容na 貌na 颜na
 容na 面目na 貌na
-容ve 容许ve
 容vj 包容vj
 容vj 容纳vj 包容vj 纳vj
 容易d 好d 易d
@@ -1431,7 +1323,6 @@
 富vc 饶vc
 富vj 饶vj
 寒nom 冷nom
-寒vh 冷vh
 寸na 吋na
 寸neqa 任何neqa
 寸nf 吋nf
@@ -1464,20 +1355,17 @@
 少d 短d
 少vh 小vh
 少vh 稀vh
-少vj 欠vj
 少vj 欠vj 乏vj
 少年nd 少时nd
 尘na 世界na
 尘nc 世界nc
 尚vj 崇vj 隆vj
 尝vc
-尝试vf
 尝试vf 试vf 尝vf 试试vf
 尤其d 特别d 尤d
 尤其dfa 格外dfa 份外dfa 分外dfa
 尬vc 斗vc 比vc
 就d 便d
-就d 即d 便d
 就p 由p 从p
 就vc 即vc
 就vj 从vj
@@ -1487,8 +1375,6 @@
 局na 厅na
 局限vc 限制vc
 局限ve 限制ve
-局限vi 限于vi
-屁na 臀na
 屁na 臀na 尾na
 层na 楼na
 层nf 格nf
@@ -1504,7 +1390,6 @@
 屋na 壳na 房子na 房舍na 屋子na 房屋na 房na
 屋na 家园na 房子na 住房na 屋子na 家na 房na
 屋nc 房子nc 房舍nc 屋子nc 房屋nc 房nc
-展vc 展开vc
 展vc 展示vc
 展现nom 展示nom
 属下a 下属a
@@ -1522,7 +1407,6 @@
 岛nc 台湾nc
 岸na 港na
 崇拜vj 崇vj
-崩va 崩溃va
 崩va 崩溃va 崩解va
 崩vc 斩vc 砍vc
 崩溃nom 崩解nom
@@ -1535,7 +1419,6 @@
 左边ncd 左ncd
 巨a
 巨nom 庞大nom
-巨vh
 巨vh 庞大vh
 差不多d 近乎d
 差不多vh 类似vh
@@ -1547,15 +1430,12 @@
 巴vc 著vc
 巴西nb 巴nb
 巴西nc 巴nc
-市na 市场na
 市nc 市场nc 集nc
 市府na 市政府na
 市府nc 市政府nc
 布a 遍a 漫a 遍布a 遍及a
 布va 布局va
 布vc
-布局va
-帅na 将na
 帅vf 率vf 领vf 部vf 带vf 率领vf
 师na 士na
 师vc 师范vc 效vc 学vc
@@ -1569,7 +1449,6 @@
 带有vc 携vc 带vc
 带有vc 附vc 带vc
 带有vj 带vj
-席na
 席na 位na 座na
 帮助nom 援nom 帮忙nom
 帮助vc 扶vc 援vc 协助vc 帮忙vc
@@ -1577,7 +1456,6 @@
 幅度na 幅na
 幕na 屏na
 干d
-干na
 干nb 乾隆nb
 干vc 盗vc 偷vc
 干vh 枯vh
@@ -1592,7 +1470,6 @@
 平vh 均vh
 平均a 均a
 年龄na 年纪na 龄na
-并d
 并且caa
 幻想ve 幻ve
 幼时nd 儿时nd 幼nd 小时nd
@@ -1602,7 +1479,6 @@
 广大vh 开阔vh 广vh
 广大vh 泛vh 广泛vh 广vh
 广州nc 广nc
-庄na
 庄na 号na 行na
 庆祝nom 庆nom
 庙nc 召nc 庙宇nc
@@ -1615,24 +1491,18 @@
 建国nom 立国nom
 建国va 立国va
 建立vc 立vc 筑vc 成vc 成立vc 创vc 建vc
-建筑na 建筑物na
 建议ve 建ve
 开va 启va
-开va 开口va
 开va 开天窗va
 开va 开球va
-开va 打开va
 开va 打开va 开口va
 开va 营业va
 开vb 开刀vb
 开vb 开玩笑vb
-开vc 创vc
 开vc 创vc 打开vc
-开vc 启vc
 开vc 开刀vc
 开vc 开玩笑vc
 开vc 开球vc
-开vc 打开vc
 开vc 打开vc 启vc
 开vc 拓vc 垦vc
 开vc 著手vc 开始vc
@@ -1655,12 +1525,10 @@
 异vh 怪vh 奇怪vh
 异vk 奇怪vk
 异国na 洋na 国外na
-弃vc 放弃vc
 弃vc 放弃vc 废vc
 弃vj 牺牲vj
 弄vc 整vc
 引vc 援vc
-引以为鉴vh
 引以为鉴vh 引以为惕vh
 引入vc 带来vc
 引入vc 引vc
@@ -1685,7 +1553,6 @@
 归vcl 回去vcl 返vcl 回vcl
 归vd 归还vd
 归属vg 归vg 属于vg 放vg
-归属vj 归vj
 归属vj 归vj 落vj 画成vj 归纳vj
 当vg 干vg 做vg 充vg 作vg
 当做ve 当ve 当成ve 视作ve 当作ve
@@ -1737,7 +1604,6 @@
 志愿na 志na
 志愿nom 自愿nom
 志愿vl 自愿vl
-忘vk 忘记vk
 忘vk 忘记vk 遗忘vk
 忙d 急急忙忙d 急忙d
 忠vc 忠于vc
@@ -1746,7 +1612,6 @@
 快d 速d
 快nom 速nom
 快vh 速vh 捷vh
-念vc
 念书nom
 念书va
 忽视vj 轻视vj
@@ -1754,7 +1619,6 @@
 怀vj 纪vj 怀念vj
 态na 体na
 态na 型态na
-态na 姿na
 态na 姿na 势na
 态na 状态na
 怍vh 愧vh
@@ -1796,7 +1660,6 @@
 惟有d 只有d 唯有d
 惧vk 惊vk 畏vk 恐vk 怕vk 害怕vk
 惯于vk 习惯vk
-惯于vl 习惯vl
 惯于vl 习惯vl 惯vl 习vl
 想ve 思ve 思考ve 思想ve 忖ve
 想vi 著想vi
@@ -1815,7 +1678,6 @@
 意指vg 意谓vg 意即vg 指vg
 意识na 神na
 意谓na 意味na
-感情na 情na
 愣va 怔va
 愣vh 傻vh 痴vh 怔vh 呆vh
 愣vh 蠢vh 呆vh 笨vh 痴vh 傻vh 愚vh
@@ -1828,7 +1690,6 @@
 憋vc 闷vc
 憋vh 紧vh
 懂vk 知vk 晓得vk 懂得vk 会vk 知道vk
-懂得vk 懂vk
 戈na 战争na 战na
 戏na 剧na
 戏va 说笑va
@@ -1863,21 +1724,17 @@
 战va 抗战va
 截na 段na
 戳vc 刺vc
-戴vc 带vc
 戴vc 捧vc 带vc
 房间na 屋子na 室na 房na
 房间nc 屋子nc 室nc 房nc
-所得na 收入na
 扁vh 平vh
 扁vh 瘦vh
-扁vh 饥vh 饿vh
 扁vh 饥vh 饿vh 瘦vh
 扁vhc 饿vhc 瘦vhc
 扎根va
 扑vc 打vc
 扑vc 拍vc
 扒na 排na
-扒vc 剥vc
 扒vc 剥削vc 剥vc 刮vc
 扒vc 巴vc
 扒vc 拆vc
@@ -1889,7 +1746,6 @@
 打vc 击vc
 打vc 打到vc
 打vc 投vc
-打vc 拍vc
 打vc 拍vc 击vc
 打vc 揍vc
 打vc 敲vc
@@ -1913,10 +1769,8 @@
 托vb
 托vc 衬vc 烘vc
 托vd 寄vd
-托vf
 托vf 委托vf
 扛vc 肩负vc
-扣na
 扣na 纽na
 扣vc 栽vc
 扫va 晃va
@@ -1935,7 +1789,6 @@
 承认ve 认ve
 技na 技巧na
 技na 技术na 术na
-技术na 术na
 抄vc 拿vc 取vc
 抄vc 钞vc
 抉vc 刨vc 扒vc 倔vc 挖vc 挖掘vc 掘vc
@@ -1982,7 +1835,6 @@
 抹vc 刷vc
 抹vc 拭vc 擦vc
 抽烟nom 吸烟nom
-抽烟va
 抽烟va 吸烟va
 担vc 肩负vc 肩vc 背vc 挑vc 揹vc 扛vc 驼vc 负vc
 担vk 操vk 担心vk 忧vk 引以为忧vk
@@ -2006,7 +1858,6 @@
 拐vc 骗vc
 拒vj 抵vj 敌vj 抗vj
 拒绝vf 拒vf 抗vf
-拓vc 扩展vc
 拓vc 扩展vc 广vc
 拔va 摇va
 拔vc 摇vc
@@ -2030,7 +1881,6 @@
 拱vc 打vc
 拱vc 矬vc 卷vc 躬vc
 拱vj 包围vj 环绕vj 绕vj 环vj
-拿vc 取vc
 拿出来vc 拿vc
 持vc 挟vc 拿vc 援vc
 持vj 怀vj 秉vj 抱持vj 本vj 抱vj
@@ -2060,7 +1910,6 @@
 挨p 遭受p 遭p 遭到p 负p
 挨vc 熬vc
 挨vj 熬vj
-捉vc 抓vc
 捉vc 抓vc 扒vc
 捉vc 抓vc 捕vc
 捉vc 抓vc 捕捉vc
@@ -2070,7 +1919,6 @@
 捐vd 捐赠vd 捐献vd 献vd
 损坏nom 破坏nom
 损坏vc 毁vc 捣vc 摧vc 破坏vc
-捡vc 拣vc
 捡vc 拣vc 拾vc
 换vc 换成vc
 换vc 转vc
@@ -2078,7 +1926,6 @@
 换言之dk 易言之dk 换句话说dk
 捧vc 顶vc
 捧场va 捧va
-据na
 据云dk 据闻dk 据说dk 听讲dk
 据悉dk 据了解dk
 捷径? 近路?
@@ -2152,7 +1999,6 @@
 提vc 拎vc
 提供vc 供vc 给以vc
 提出vc 提vc
-提出ve 提ve
 提出ve 提ve 提起ve
 提到ve 讲到ve 提起ve 谈起ve 说到ve 提ve 提及ve
 提升vc
@@ -2162,7 +2008,6 @@
 握vc 掐vc 攥vc 捏vc
 握vc 攥vc
 握vc 秉vc 攥vc 捏vc
-揹vc 背vc
 揹vc 背vc 负vc 驼vc
 搁caa 亦caa 又caa 而且caa 且caa 载caa
 搁d 再d
@@ -2176,11 +2021,8 @@
 搭i 答i
 搭vc 架vc
 搭配nom 配合nom
-搭配vc 配vc
-搭配vc 配vc 搭vc
 搭配vc 配vc 搭vc 配合vc
 搭配vh 搭vh
-携vc 带vc
 携vc 牵vc
 摄取vc 摄vc
 摊na 摊子na
@@ -2206,7 +2048,6 @@
 收入vc 收vc
 收入vc 记下来vc 保存vc 背vc 记vc 志vc 收vc 留vc 存vc 记住vc 记得vc
 收入vcl 收vcl
-改vc 修改vc
 改vc 修改vc 修vc
 改vc 改变vc 爰vc
 改变nom 变化nom 转变nom 变nom
@@ -2269,13 +2110,11 @@
 料na 肥料na 肥na
 料ve 预期ve 预料ve
 斩vc 劈vc 砍vc
-斩vc 砍vc
 新a 新兴a
 新na 新加坡na 星加坡na 星na
 新nc 新加坡nc 星加坡nc 星nc
 新vh 新兴vh
 新加坡nb 星加坡nb
-新加坡nc 星加坡nc
 新型a 新式a
 方d 乃d 才d 始d
 方d 才d
@@ -2285,14 +2124,11 @@
 方便vk 便利vk 便vk
 方式na 术na 法na 手法na 方na 方法na
 方案na 案na
-施vc 使vc
 施vc 施力vc 使vc
 施vc 舍vc
-施vc 行vc
 施工va 动工va
 施肥vb 施vb
 施舍vd 乞vd
-旁ncd 旁边ncd
 旁ncd 旁边ncd 畔ncd 边ncd
 旁ncd 端ncd 边ncd 首ncd 方ncd 缘ncd
 旁nes 别nes
@@ -2323,10 +2159,7 @@
 早vj 先vj
 旱na 干旱na
 旱vh 干旱vh
-时代na 年代na
 时候na 际na 时na
-时间na 时na
-旺vh 热vh
 昂vh 贵vh
 昆仲nh 伯仲nh
 明va 亮va
@@ -2362,20 +2195,16 @@
 晒vj
 晓na 旦na
 晓nd 旦nd
-晓vk 晓得vk 知道vk
 晓vk 晓得vk 知道vk 详vk
 晚a 夜a
 晚vh 迟vh
 晚上nd 夜晚nd 夕nd 宵nd 晚nd 夜nd
-普通a 一般a
 普通d 通常d 普遍d 一般d
 普通vh 一般vh
 智na 智慧na
 暂时d 暂d
 暑nom 热nom
 暖vhc 亮vhc
-暴va 爆va
-暴vc 爆vc
 暴vh 爆vh
 曝va 暴va
 曝va 露面va
@@ -2434,7 +2263,6 @@
 本来a 本a 原本a 原有a 原先a 原来a 固a 原a
 本钱na 本na 本金na
 朱na 红na 赤na
-朴实vh 朴vh
 机械a 机器a
 机械na 机na 机器na
 机械na 机器na
@@ -2450,9 +2278,7 @@
 杂vc 浑vc 混vc 夹vc 带有vc 掺vc 挟vc
 权na 权利na
 权力na 权na
-杆na
 李子na 李na
-材na 才na
 材na 才na 资na
 材nf 才nf
 材料na 资料na
@@ -2470,7 +2296,6 @@
 来临va 来va
 来自于vj 出自vj 来自vj 出于vj 出vj 源于vj
 来自于vj 源于vj 出于vj 出自vj 来自vj
-杯na
 杯na 杯子na
 杯nf
 杰出vh 杰vh 优秀vh
@@ -2481,7 +2306,6 @@
 林na 列na
 果na 结果na
 果然d 果真d 真的d 果d
-枪na 鎗na
 枪nf 鎗nf
 枯竭vh 枯vh
 某nes 某某nes
@@ -2520,7 +2344,6 @@
 棉a 绵a
 棉na 绵na
 棍na 棍子na
-棒na 棒子na
 棒na 棒子na 杖na
 植物na 植na
 榨vc 搾vc
@@ -2567,7 +2390,6 @@
 母na 雌na
 每隔p 隔p
 毒na 剧毒na
-毒na 毒物na
 毒na 毒物na 药na
 毒na 病毒na
 毒vc 毒害vc
@@ -2603,7 +2425,6 @@
 汝等nh 您们nh 你们nh 尔等nh
 江苏na 苏na
 江苏nc 江苏省nc 苏nc
-污na
 污na 污水na
 污nom 肮脏nom
 污vc 污染vc
@@ -2613,11 +2434,9 @@
 汰vh 淫vh 过度vh
 汲汲于d 汲汲d
 汲汲于vl 汲汲vl
-汽na 气na
 汽na 气na 气体na
 汽车na 汽na
 沃va 灌va
-沉vh 沈vh
 沉vh 沈vh 垫vh
 沉vh 沈vh 熟vh
 沉vh 沈vh 落vh
@@ -2630,7 +2449,6 @@
 沙nc 沙乌地阿拉伯nc 沙国nc
 没d 没有d
 没t 没有t
-没vj 没有vj
 没vj 没有vj 无vj
 没vj 没有vj 毋vj 无vj
 没想到dk 讵料dk 孰料dk 想不到dk 意想不到dk 不料dk 岂料dk
@@ -2647,9 +2465,7 @@
 泄va 漏va 漏出va
 泄vc 漏vc 走vc 露vc 漏出vc 曝vc
 泉nc 泉州nc
-法na 法律na
 泛d
-泛vc
 泛vc 斥vc
 泡na 冲na
 泡nom 冲nom
@@ -2677,7 +2493,6 @@
 泰雅族na 泰雅na
 泰雅族nb 泰雅nb
 洁vh 净vh 干净vh 清洁vh
-洁vh 干净vh
 洁vh 清洁vh 干净vh
 洁vhc 净vhc
 洒va 摊va 撒va
@@ -2705,13 +2520,11 @@
 流动a 游a
 测nom 测量nom
 测vc 卜vc 预测vc
-测vc 测量vc
 测vc 测量vc 量vc
 浑a 混a
 浑d 浑然d
 浑dfa 甚dfa 异常dfa 酷dfa 甚为dfa
 浑vc 伴vc 混vc 拌vc
-浑vh
 浑vh 混vh
 浓vh 厚vh
 浮游nom 浮潜nom
@@ -2744,7 +2557,6 @@
 深vh 奥vh
 深vh 秀vh 荣vh 茂vh 蔚vh
 淹没vc 灭vc
-清vh 干净vh
 清vh 干净vh 清洁vh
 清华nb 清nb
 清洁nom 干净nom
@@ -2752,7 +2564,6 @@
 清洗vc 洗vc
 清清楚楚d 清楚d 清d 清晰d 明d
 清理nom 清洁nom
-清理vc 清vc
 清理vhc 清vhc
 清除vc 清洗vc
 清除vc 清理vc
@@ -2775,7 +2586,6 @@
 游d
 游nom 旅游nom 观光nom
 游nom 游泳nom
-游va
 游va 戏va
 游va 旅行va 旅游va 观光va
 游va 游泳va
@@ -2787,16 +2597,11 @@
 湘na 湖南na
 湘nc 湖南nc
 湿na
-湿vh
-湿vhc
 湿vhc 潮湿vhc
-源na 来源na
 源na 来源na 源头na
 源na 能na 能源na
 源自vi 发源vi
 溜na 带na
-溶化va 溶va
-溶化vc 溶vc
 滋vc 润vc
 滋vc 补vc 召vc 润vc
 滋vc 长vc 生vc
@@ -2845,9 +2650,7 @@
 灌vc 灌输vc
 火na 怒na
 火vh 怒vh
-灭va 熄va
 灭vc 熄vc
-灵na 灵魂na
 灵vh 灵活vh
 灵敏a 灵a
 灵敏vh 灵vh
@@ -2887,7 +2690,6 @@
 照理dk 照说dk 照道理说dk 照理说dk
 熟悉vh 熟vh
 熟悉vj 熟vj
-燃vc 点燃vc
 燃vc 点燃vc 鼓vc
 燃vc 焚vc 燃烧vc 烧vc 然vc
 燃vh 燃烧vh 然vh
@@ -2899,7 +2701,6 @@
 爱vj 恋vj
 爱vj 珍惜vj 珍vj 惜vj
 爷爷na 公na 爷na 祖父na
-爷爷na 公公na 公na 爷na
 爷爷na 公公na 公na 爷na 祖父na
 爸na 爸爸na
 爸爸na 老子na 父亲na 爷na 父na 爹na 爸na
@@ -2921,8 +2722,6 @@
 犁vh 皂vh 鸦vh 乌vh 黑vh 青vh
 犬na 狗na
 犯罪va 犯va
-犯规va 犯va
-犹d 还d 尚d
 狂na 痴na
 狠d 狠狠d 臭d
 狠vh 厉害vh 神vh
@@ -2933,7 +2732,6 @@
 狭vh 狭隘vh 窄vh
 狭vh 窄vh
 狱na 案na
-狱na 监na 牢na
 狱na 监na 牢na 监狱na
 猎物na 猎na
 猛d 劲d
@@ -2941,7 +2739,6 @@
 猛d 狂d
 猛vh 狂vh
 猪na 豕na
-猪na 豚na
 猪na 豚na 豕na
 猫na 喵na
 王na 帝na
@@ -2966,11 +2763,9 @@
 甘vk 甘愿vk 甘心vk
 甚而cbb 乃至于cbb 乃至cbb 以至于cbb 甚或cbb 连cbb 甚至于cbb 以至cbb 甚至cbb
 甚而d 甚或d 甚至于d 甚至d
-生na 学生na
 生nom 生存nom
 生vc 升vc
 生产nom 产nom
-生产vc 产vc
 生产vc 产vc 生vc
 生出来vc 弄vc 生vc
 生命na 命na 身na
@@ -2990,7 +2785,6 @@
 用d 用得著d
 用na 用途na 用处na
 用nom 使用nom
-用p 以p
 用p 以p 拿p
 用vc 使用vc
 用vc 录vc
@@ -3001,13 +2795,11 @@
 甩va 摔va
 甩va 逃va 摔va
 甩vc 抛vc
-甩vc 摔vc
 甩vc 摔vc 扇vc
 甩vc 鸟vc 理vc
 甫d 刚d 乍d 刚刚d
 田na 农田na
 由na 理由na
-由p 从p
 由p 打p 打从p 从p
 由p 打p 自p 打从p 从p
 由p 自p 从p
@@ -3041,7 +2833,6 @@
 疑vk 怀疑vk
 疲惫nom 累nom 倦nom
 病vh 生vh
-病症na 病na
 病症na 病na 疾病na 症na 疾na
 病症na 表现na 症na
 痛nom 疼nom
@@ -3055,7 +2846,6 @@
 登vcl 上vcl
 登vcl 入vcl 进入vcl
 登vcl 登陆vcl
-登台va
 登台va 上台va
 白vh 明白vh
 白天nd 日nd 昼nd
@@ -3073,9 +2863,7 @@
 盲nom 瞎nom
 盲va 瞎va
 盲vc 瞎vc
-直d 一直d
 直d 简直d
-直接d 直d
 直接d 直d 一直d
 直接vh 直vh
 相互d 交互d
@@ -3103,24 +2891,19 @@
 看做vg 视为vg 看成vg 看作vg
 看官na 看倌na
 看看vc 相vc 看vc 卜vc
-看看vc 看vc
 看看vc 看vc 看病vc
 看看vc 看vc 观vc 观察vc
 看起来d 看来d
 真实nom 真nom
-真实vh 真vh
 真实vh 真vh 实vh
 眨vc 瞬vc
 眨vh 瞬vh
 眸na 眼睛na 眼na 目na
-眼na 目na
 眼na 眼睛na
 睡nom 眠nom 睡觉nom
 睡va 眠va 寝va 睡觉va 困va
-睡va 睡觉va
 睡va 睡觉va 寝va
 睡va 睡觉va 醒va
-睡vc 睡觉vc
 睡vc 睡觉vc 上vc 爱vc 干vc 凸vc
 瞩目nom 嘱目nom
 瞩目vb 嘱目vb
@@ -3135,7 +2918,6 @@
 短vh 暂vh 浅vh
 矮vh 低vh
 码na 号na
-研究ve 研ve
 研究所na 研究院na
 研究所nc 研究院nc
 研究院na 研na 研究所na
@@ -3143,7 +2925,6 @@
 砲na 炮na
 破va 打破va
 破vb 破案vb
-破vc 打破vc
 破vc 揭vc 暴vc 爆vc
 破vhc 打破vhc
 破旧a 敝a 破a
@@ -3217,14 +2998,12 @@
 空na 洞na
 空na 闲na
 空vc 腾vc
-空vhc 腾vhc
 空气na 焰na
 空间na 空na
 穿越vc 穿vc
 突d 忽d 乍d 突然d
 突va 凸va
 突va 突破va
-突vc 破vc 突破vc
 突vc 破vc 突破vc 打破vc
 突vc 突破vc 破vc 刷vc 打破vc
 突vc 解vc 释vc 打破vc 破vc 突破vc
@@ -3245,7 +3024,6 @@
 章na 编na
 竹nc 新竹nc
 竿na 撑竿na 杆na
-竿na 杆na
 笑vc 嘲vc
 笨vh 蠢vh
 等nf 号nf
@@ -3257,7 +3035,6 @@
 答复nom 回答nom 答nom
 答复ve 回答ve 答ve
 答应vc 应vc
-答应ve 应ve
 答应ve 应ve 肯ve
 筹vc 筹措vc
 筹vj 备vj 准备vj
@@ -3291,7 +3068,6 @@
 粪vh 背vh 屎vh 衰vh 赛vh 不幸vh 塞vh
 粪vhc 肥vhc
 粮食na 粮na
-糟vh 坏vh 差vh
 素d 雅d 从来d 从d 向d 一向d 向来d
 素na 元na
 紧急vh 迫切vh 紧vh
@@ -3313,7 +3089,6 @@
 纵使cbb 即便cbb 就算cbb 纵然cbb 便是cbb 纵cbb 即使cbb 就是cbb 即令cbb
 纽约nc 纽nc
 组织na 社na
-细d 精d
 细vh 精vh
 细微vh 微小vh
 织vc 编vc
@@ -3325,7 +3100,6 @@
 经国nb 蒋经国nb 蒋nb
 经济na 经na
 经理vc 理vc
-经由p 经p
 经营va 营运va
 经营vc 营vc
 经过na 过程na
@@ -3339,7 +3113,6 @@
 结vc 结束vc
 结vh 结巴vh
 结vhc 结束vhc
-结为vc 结vc
 结为vc 结vc 长vc 生vc
 结为vg 合而为一vg
 结为vg 结vg
@@ -3356,7 +3129,6 @@
 给p 乎p
 给vd 予vd 带给vd
 给予na 给与na
-给予vd 给与vd
 给予vd 给与vd 予vd 赋vd 赋予vd 赋与vd 给vd
 绝d 决d 绝对d 断d
 绝vh 尽vh 穷vh
@@ -3371,14 +3143,12 @@
 维护vc 护vc
 维生va 吃饭va
 绵nom 柔nom
-绵vh 柔vh
 绵vh 柔vh 软vh
 绵延vh 绵vh
 绵延vj 绵vj
 综vc 综合vc
 缀vc 纳vc 衲vc 缝vc
 缀vc 饰vc
-缓vh 缓和vh
 缓vhc 减缓vhc 缓和vhc
 编na 卷na 书na
 编成vb 编组vb 编vb
@@ -3428,7 +3198,6 @@
 翻nf 番nf
 翻va 覆va
 翻vc 翻开vc
-翻vc 翻译成vc
 翻vg 翻译成vg
 耀va 闪va
 耀vhc 荣耀vhc 显vhc
@@ -3447,7 +3216,6 @@
 考卷na 卷na
 考虑nom 考量nom
 考量ve 看看ve 研究ve 研ve 思索ve 考虑ve
-耍vc 弄vc
 耳na 耳朵na
 耶稣nb 基督nb
 耸vj 吓vj
@@ -3458,10 +3226,7 @@
 聘vf 聘用vf 聘请vf 聘任vf
 聚集nom 群聚nom 汇聚nom 会聚nom
 聚集va 汇聚va 凑va 群聚va 会聚va 聚va
-聚集va 群聚va
 聚集va 群聚va 抟va
-肚na 肚子na
-肚nf 肚子nf
 股na 股票na
 股市na 市场na 股票市场na
 股市na 股票市场na
@@ -3470,7 +3235,6 @@
 肥vh 肿vh 胖vh
 肥vh 胖vh
 肥vhc 胖vhc
-背vc 负vc
 背vj 负vj
 胡d 为什么d 何为d 为啥d 为甚么d 何故d 因何d 何以d 为何d
 胡nep 什nep 啥nep 什么nep 何等nep 甚么nep 甚nep 啥子nep
@@ -3479,10 +3243,8 @@
 能够d 能d
 脉na 血管na
 脊椎na 脊na
-脏vh 肮脏vh
 脓na 毒物na 病毒na
 脖子na 项na 领na 颈na 脖na
-脚na 腿na
 脚na 角na 腿na
 脱va 逃va
 脱vc 褪vc
@@ -3507,7 +3269,6 @@
 至少da 最少da
 舍得vc 舍vc
 舒vc 出vc 呼vc
-舒vc 展vc
 舒vc 展vc 展开vc
 舒服nom 舒适nom
 舒服vh 舒适vh
@@ -3547,11 +3308,8 @@
 荐vc 推荐vc
 荒唐vh 扯vh 瞎vh
 荡a
-荡va
 荡va 晃va 摇va 摆va
-荡vc
 荡vc 尽vc 穷vc 倾vc
-荡vh
 荡vh 淫vh 浪vh 骚vh
 荣vh 繁荣vh
 药物na 药na
@@ -3595,12 +3353,10 @@
 融va 溶化va 溶va
 融vc 熔vc
 螺丝na 螺旋na
-蠢vh 呆vh 笨vh 矬vh 拙vh 傻vh
 行动nom 动作nom
 行动va 动作va
 行礼vc 施vc 敬vc 行vc
 行驶va 走va 行va
-衔接vj 连接vj
 衣na 服na 衣服na
 衣na 皮na
 衣na 衫na 衣服na
@@ -3611,7 +3367,6 @@
 补粧vb 补妆vb
 补贴nom 贴补nom
 补贴vd 贴补vd 贴vd
-表na
 表现na 行为na 行na 行动na
 表示nom 表达nom
 表示vc 代表vc
@@ -3656,13 +3411,11 @@
 观na 观点na
 观vc 阅vc 看看vc 看vc 观赏vc 睹vc
 观世音na 观音na
-规划vc 规画vc
 规劝vf 规vf
 觅vc 谋vc 寻找vc 寻求vc 挖掘vc 掘vc 找vc
 视力na 眼睛na
 觉vc 感到vc
 觉vj 感到vj
-觉vk 觉得vk
 觉vk 觉得vk 感到vk
 角度na 角na
 角落nc 角nc
@@ -3670,9 +3423,7 @@
 解vc 松vc
 解vhc 松vhc
 解释vc 讲vc 说vc
-解雇vb
 言na 语na 言语na
-言ve 讲ve
 言ve 讲ve 说ve
 言ve 道ve 讲ve
 言ve 道ve 说道ve 云ve 曰ve 谓ve 讲ve 说ve
@@ -3687,7 +3438,6 @@
 计na 谋na 计划na 规画na 筹na 规划na
 计vc 谋vc 计划vc 规划vc 规画vc
 计划nom 规划nom 规画nom
-计划vf
 计算vc 算vc
 计较vk 较量vk
 认清楚nc 分别nc 分nc 地区nc 角落nc 地方nc 认清nc 地nc 区域nc 区nc 国nc
@@ -3705,24 +3455,19 @@
 记na 纪na 录na 志na
 记录vc 纪录vc 纪vc 记vc 录vc 志vc
 记录片na 纪录片na
-讲vc 说vc
-讲ve 说ve
 讲到ve 说到ve
 讲话na 说话na
 讲话na 谈话na
 讲话nom 说话nom 言语nom
 讲话va 讲va 说话va 说va
-讲话va 说话va
 讲话va 说话va 语va 言语va
 许vc 配vc 字vc
 许ve 许可ve
 设定vc 设vc
 设有vc 设vc
-设有vj 设vj
 设有vj 设vj 置vj
 访vc 顾vc
 访vk 顾vk
-证na 証na
 证na 証na 证据na
 证na 証na 证明na
 证ve 証ve 证明ve
@@ -3745,7 +3490,6 @@
 诱vl 诱使vl
 诱vl 诱发vl
 说不定d 搞不好d
-说出来vb 说出vb
 说出来ve 说出ve
 说明na 说明书na
 说明vc 分解vc
@@ -3765,7 +3509,6 @@
 诺贝尔奖nb 诺贝尔nb
 读na 逗na
 读na 音na
-读vc 念vc
 读vc 念vc 读书vc 阅读vc
 读vc 念书vc 念vc 读书vc
 读vc 音vc
@@ -3801,12 +3544,10 @@
 贰neu 二neu 两neu
 贴vc 亏vc
 贷款na 贷na
-贷款vd 贷vd
 贷款vd 贷vd 放款vd
 费用na 资na 花费na 钱na 费na 料na
 贺ve 庆祝ve 庆ve
 赁vc 出租vc 租vc
-资产na 财产na
 资产na 财产na 业na 产na
 资本na 本na 本钱na
 资格na 格na
@@ -3857,17 +3598,14 @@
 趣na 意味na
 足na 脚na 腿na
 足堪vl 足vl 可资vl 足以vl
-足够vh 够vh
 足见dk 可见dk
 趴va 伏va
 跑va 走va
 跑va 跑掉va
-跟不上vj 落后vj
 跟不上vj 落后vj 落vj
 跨vc 贯vc
 跨越? 越? 超越?
 跨越vc 跨vc
-跨越vcl 跨vcl
 跨越vcl 跨vcl 越vcl 超越vcl
 跩vh 倨vh 亢vh 傲vh 骄vh
 跪va 跪下va
@@ -3894,7 +3632,6 @@
 转vc 弯vc
 转vc 转送vc
 转业va 改行va
-转为vg 转成vg 转化为vg
 转变成vg 成为vg 转变为vg 变为vg 变vg 变成vg
 轮到vl 轮vl
 软性a 软a
@@ -3918,7 +3655,6 @@
 辈nf 代nf
 辈nf 生nf 世nf
 输vd 搭vd 赔vd
-辙na 轨na
 辙na 轨na 道na 办法na 途na
 辛nom 辣nom
 辛vh 辣vh
@@ -3929,7 +3665,6 @@
 辱vj 侮辱vj
 边na 垂na
 边na 缘na
-边nc 周围nc
 边ng 顷ng 附近ng
 辽vh 阔vh
 达到vcl 到vcl 达vcl
@@ -3951,7 +3686,6 @@
 迈va 进va 成长va 进步va
 运vc 施vc 使vc
 运动va 活动va
-近da 将近da
 近da 将近da 接近da
 近nes 将近nes
 近vh 拢vh 接近vh
@@ -3973,7 +3707,6 @@
 这边ncd 此ncd 这儿ncd 这里ncd
 这里ncd 斯ncd 这边ncd 这儿ncd 这ncd 此ncd
 进va 进香va
-进vcl 入vcl 进入vcl
 进vg 入vg 收入vg
 进去va 进va 进来va
 进去vcl 进vcl 入vcl 进入vcl 进来vcl
@@ -3993,7 +3726,6 @@
 连续d 接连d 一连d 相继d 连d
 迫vh 挤vh
 追vc 补vc
-追vc 赶vc
 追vc 跟踪vc 追求vc
 追vc 追求vc
 追vc 逼vc
@@ -4014,7 +3746,6 @@
 选vc 参选vc
 透dfb 穿dfb
 透过p 通过p
-途na 路na
 途径na 道路na 路na
 通va 通讯va
 通vc 畅vc 疏vc
@@ -4023,13 +3754,11 @@
 通vh 畅vh
 通过vc 过vc
 通过vcl 过vcl
-速率na 速度na
 速率na 速度na 速na
 造vc 做vc 作vc
 造vc 创vc 创造vc
 造vc 建立vc 建造vc 筑vc 建设vc 创vc 建vc
 造vc 打vc 做vc 交vc 作vc
-造vc 构vc 制vc
 造vc 构vc 制vc 建造vc 建筑vc 盖vc 建vc 作vc
 造vc 造成vc
 造vg 造成vg
@@ -4049,10 +3778,8 @@
 邀nom 邀请nom 请nom
 邀vf 邀请vf 请vf
 那d 那里d 安d 哪d 哪里d 如何d 何d
-那ncd 哪ncd
 那ncd 哪ncd 那儿ncd
 那ncd 那儿ncd 那边ncd 那里ncd
-那nep 哪nep
 那么da 区区da
 那些neqa 哪些neqa
 那样nep 那么样nep
@@ -4088,8 +3815,6 @@
 金像奖na 奥斯卡na
 金像奖nb 奥斯卡nb
 金钱na 子na 钱na
-鉴na
-鉴vc
 鉴vc 照vc
 针na 刺na
 针vb 针灸vb
@@ -4134,7 +3859,6 @@
 镇压vc 镇vc
 镜na 鉴na
 长va 生va
-长vc 生vc
 长大va 大va
 门na 窗na
 闪va 亮va
@@ -4144,7 +3868,6 @@
 问题na 题na
 间? 之间?
 间ncd 之间ncd
-间ng 之间ng
 间p 隔p
 闻vc 听vc 聆vc
 闻vi 鸣vi 著名vi 闻名vi 著称vi
@@ -4184,7 +3907,6 @@
 险vh 阻vh
 陪伴vc 陪vc
 随便cbb 随cbb
-随手d 顺手d
 随时d 时时d
 随著? 随?
 随著p 伴随p 随p
@@ -4200,7 +3922,6 @@
 隙na 缝na
 隙vh 空vh 闲vh
 障碍na 障na
-难过vh 难受vh
 难过vh 难受vh 糟vh 坏vh 差vh
 难过vk 难受vk
 雅na 感情na 情na 情谊na
@@ -4211,7 +3932,6 @@
 集合? 聚集?
 集合vc 联vc 联合vc
 集成na 集na
-雇vf
 雇vf 请vf
 雨va 下雨va 降雨va
 需nom 需要nom
@@ -4237,7 +3957,6 @@
 面前na 眼前na
 面前nc 当前nc
 面前nc 眼前nc
-面目na 貌na
 靳vl 吝于vl
 韩nb 韩国nb
 韩nc 韩国nc
@@ -4255,12 +3974,10 @@
 预定nom 打算nom
 预期nom 预料nom
 预算ve 预计ve
-领vc 带vc
 领vc 带领vc 带vc
 领取vc 领vc
 领袖nb 蒋nb 蒋介石nb 中正nb 蒋公nb
 颇为dfa 颇dfa
-颈na 脖na
 频na 频率na
 题na 主题na
 风格na 风na

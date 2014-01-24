@@ -770,9 +770,23 @@ def test3():
            f_lines.append(u' '.join(words))
            #fout.write(u' '.join(words))
            #fout.write(u'\n')
-   
-   with codecs.open('cwn_2', 'w', 'utf-8') as fout:
-       for line in sorted(list(set(f_lines))):
+   lines_dict = {}
+   for line in f_lines:
+       lines_dict[line] = 1
+   def find_line(line):
+       lines_dict[line] = 0
+       for l,v in lines_dict.iteritems():
+           if v and l.find(line)>=0:
+               return True
+       lines_dict[line] = 1
+       return False
+   lines = lines_dict.keys()
+   f_lines = []
+   for l in lines:
+       if not find_line(l):
+           f_lines.append(l)
+   with codecs.open('cwn_3', 'w', 'utf-8') as fout:
+       for line in sorted(f_lines):
            if len(line.split()) <= 0:
                continue
            fout.write(u'%s\n'%line)
