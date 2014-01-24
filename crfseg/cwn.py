@@ -611,7 +611,7 @@ def synsets(userInput):
     #return synsets
 
 def test1():
-    iden = '看见'
+    iden = '你们'
     iden = simp2trad(iden)+'.n.0100'
     print 'iden ', iden
     #iden = '真1.v.0310'   #lemma---------antonyms()
@@ -663,7 +663,7 @@ def test2():
    synos_dict = {}
    sens_dict = {}
    groups = []
-   logfile = codecs.open('zzz', 'w', 'utf-8')
+   logfile = codecs.open('cwn_1', 'w', 'utf-8')
 
    select = "SELECT cwn_id, synonym_word, ref_id FROM cwn_synonym UNION SELECT cwn_tmpid, synonym_word, ref_id FROM cwn_synotmp UNION SELECT cwn_id, var_word, ref_id FROM cwn_varword UNION SELECT cwn_tmpid, var_word, ref_id FROM cwn_vartmp"
    all_synos = []
@@ -726,66 +726,56 @@ def test2():
                groups[group].append(word)
    i = 0
    for g in groups:
-       logfile.write(u"\n\ngroup %d: " % i)
-       for w in g:
-           logfile.write(u" (%s,%s,%s) " % (w[0], trans.trad2simp(w[1].encode('utf-8')).decode('utf-8'), w[2]))
+       #logfile.write(u"\n\ngroup %d: " % i)
+       for w in sorted(g, key=lambda x: x[1]):
+           logfile.write(u" %s,%s " % (trans.trad2simp(w[1].encode('utf-8')).decode('utf-8').strip(), w[2]))
+       logfile.write(u'\n')
        i += 1
 
 def test3():
-   trans = zerorpc.Client("tcp://0.0.0.0:3333", timeout=10000)
-   en_word_re = re.compile(r'[a-zA-Z]+', re.I|re.U)
-   sens = {}
-   trie = datrie.Trie(ranges=[('0','9'), (u'\u4e00', u'\u9fff')])
-
-   cursor.execute("SELECT lemma_id, cwn_lemma FROM cwn_lemma")
-   lemmas = cursor.fetchall() # 6 digits
-   for lem in lemmas:
-       print 'lem', lem[1]
-       cursor.execute("SELECT sense_id FROM cwn_sense UNION SELECT sense_tmpid FROM cwn_sensetmp")
-       sns = cursor.fetchall()
-       for sn in sns:
-           senseid = sn[0]
-           cursor.execute("SELECT pos FROM pos WHERE cwn_id = '"+senseid+"' UNION SELECT pos FROM pos_tmp WHERE cwn_tmpid = '"+senseid+"'")
-           tag = cursor.fetchall()
-           pos = '?'
-           if len(tag) > 0:
-               pos = tag[0][0].lower()
-           print 'pos', pos
-           word = [lem[0], lem[1], sn[0], pos]
-           selfId = senseid
-           cursor.execute("SELECT synonym_word, ref_id FROM cwn_synonym WHERE cwn_id ='"+selfId+"' UNION SELECT synonym_word, ref_id FROM cwn_synotmp WHERE cwn_tmpid ='"+selfId+"' UNION SELECT var_word, ref_id FROM cwn_vartmp WHERE cwn_tmpid ='"+selfId+"' UNION SELECT var_word, ref_id FROM cwn_vartmp WHERE cwn_tmpid ='"+selfId+"'");
-           synos = cursor.fetchall()
-           sense1 = []
-           print synos
-           if len(synos) != 0:
-               for tup in synos:
-                   if not tup[1]:
-                       continue
-                   member = tup[0]+'..'+ tup[1]
-                   sense1.append(member)
-           #### insert pos tag
-           pos = []
-           for a in sense1:
-               lemmaName = a[:-6]
-               refId = a[-4:-2]
-               ###############  找出sense_id  ###########################################   
-               cursor.execute("SELECT lemma_id FROM cwn_lemma WHERE cwn_lemma = '"+lemmaName+"'")
-               lemmaId = cursor.fetchall()
-               #print lemmaId  #((u'070301',),) type:unicode
-               if len(lemmaId) <= 0:
+   en_word_re = re.compile(ur'[\u4e00-\u9fa5]+', re.I|re.U)
+   f_lines = []
+   with codecs.open('cwn_1', 'r', 'utf-8') as file:
+       for line in file:
+           words = line.split()
+           if len(words) < 2:
+               continue
+           new_w = []
+           max_pos = {}
+           for word in words:
+               has_w = {}
+               try:
+                   w1,w2 = word.split(',')
+               except:
+                   print word
                    continue
-               senseid = lemmaId[0][0] + refId
-               cursor.execute("SELECT pos FROM pos WHERE cwn_id = '"+senseid+"' UNION SELECT pos FROM pos_tmp WHERE cwn_tmpid = '"+senseid+"'")
-               tag = cursor.fetchall()
-               if len(tag) == 0:
-                   pos = '?'
-               else:
-                   pos.append(tag[0][0][0].lower())
-           index = [a.find('.') for a in sense1]
-           senses = []
-           for n in range(len(pos)):
-               senses.append(sense1[n][:index[n]+1]+pos[n]+sense1[n][index[n]+1:])
-       break
+               m = en_word_re.match(w1)
+               if m:
+                   w1 = m.group()
+               if w2.strip() != '?':
+                   if w2 in max_pos:
+                       max_pos[w2.strip()] += 1
+                   else:
+                       max_pos[w2.strip()] = 1
+               new_w.append(w1)
+           max_v = 0
+           pos = '?'
+           for k,v in max_pos.iteritems():
+               if max_v < v:
+                   max_v = v
+                   pos = k
+           words = []
+           for word in set(new_w):
+               words.append(u'%s%s'%(word,pos))
+           f_lines.append(u' '.join(words))
+           #fout.write(u' '.join(words))
+           #fout.write(u'\n')
+   
+   with codecs.open('cwn_2', 'w', 'utf-8') as fout:
+       for line in sorted(list(set(f_lines))):
+           if len(line.split()) <= 0:
+               continue
+           fout.write(u'%s\n'%line)
 
 if __name__ == "__main__":
-   test2()
+   test3()

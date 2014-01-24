@@ -3,9 +3,7 @@
 一则cbb 一来cbb
 一同d 一并d 一块d 相互d 一块儿d 共同d 一起d
 一味d 一昧d
-一定a 常a
 一定a 相当a
-一定vh 相当vh
 一定vh 相当vh 特定vh 具体vh
 一家子nh 家人nh 合家nh 阖家nh
 一律vh 一致vh
@@ -19,44 +17,25 @@
 一般来说dk 一般而言dk
 一面d 边d 一边d 带d
 丁na 丁年na
-丁na 夫na
 丁na 夫na 男人na
 七neu 柒neu
-万na
-万neu
 万万d 万d
 丈夫na 夫na 先生na
 丈夫na 夫na 先生na 婿na
 三neu 参neu
-上ncd 上面ncd
 上ncd 上面ncd 以上ncd
 上va 上去va
-上va 启va
-上vac 转vac
-上vb 连线vb
-上vc 转vc
 上vc 附vc 附身vc
 上vcl 上去vcl
-上升va
 上升va 升va
-上台va
-上学va 上va
-上学vcl 上vcl
 上海na 沪na
 上海nb 沪nb
-上班va 上va
-上课va 上va
-下vc 做vc 作出vc 作vc 做出vc
-下vc 压vc 押vc
-下vc 放vc
-下台va
+做vc 作出vc 作vc 做出vc
+压vc 押vc
 下面ncd 下ncd
 下面ncd 下ncd 稍后ncd 以下ncd
-不予d 不加d
-不予vl 不加vl
 不仅cbb 不仅仅cbb 不祇cbb 不但cbb 不单单cbb 不止cbb 不光cbb 不只cbb 不单cbb 非但cbb 不啻cbb
 不仅da 不仅仅da 不祇da 不止da 不光da 不只da
-不便vh 紧vh 据vh
 不免d 难免d
 不到vj 不及vj
 不同nom 异nom
@@ -73,7 +52,6 @@
 不经意d 无意d
 不经意vl 无意vl
 不能d 不可d 不容d 不许d 不可以d
-不能d 不行d
 不能vh 不行vh
 不致d 不致于d
 不舍vl 爱vl 恋vl 舍不得vl
