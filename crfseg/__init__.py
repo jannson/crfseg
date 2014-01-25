@@ -44,7 +44,7 @@ def create_syno_trie():
             for word in line.split():
                 w1,w2 = word.split(',')
                 words.append((w1.strip(), w2.strip()))
-            for word in words[1:]:
+            for word in words:
                 if not word in dict:
                     dict[word] = words[0]
     #for k,v in dict.iteritems():
@@ -55,7 +55,7 @@ def create_syno_trie():
 def syno_word(trie, w):
     v = w
     while True:
-        if w in trie:
+        if w in trie and trie[w] != v:
             v = trie[w]
             w = v
         else:
@@ -190,9 +190,10 @@ class Tagger(object):
             if x not in stop_words_global:
                 yield x
 
-tagger = Tagger()
-stest = u'您们都跑哪里去玩了？最前面的那个地方是什么！您是谁，您想怎样? 高兴不！'
-print stest
-print u' '.join(list(tagger.cut_syno(stest)))
-print '\n'
-#print syno_word(syno_trie_global, (u'半点','m'))[0]
+if __name__ == '__main__':
+    tagger = Tagger()
+    stest = u'您们都跑哪里去玩了？最前面的那个地方是什么！您是谁，您想怎样? 高兴不！不错，我就是非常爱你！你这个人怎么这么讨厌'
+    print stest
+    print u' '.join(list(tagger.cut_syno(stest)))
+    print '\n'
+    print syno_word(syno_trie_global, (u'半点','m'))[0]
