@@ -8,6 +8,7 @@ import codecs, sys, os
 import sqlite3
 from opencc import OpenCC, DictType
 import re
+import crfseg
 
 path1 = ['simp_to_trad_characters.ocd', 'simp_to_trad_phrases.ocd']
 path2 = ['trad_to_simp_characters.ocd', 'trad_to_simp_phrases.ocd']
@@ -765,7 +766,7 @@ def test3():
                    max_v = v
                    pos = k
            words = []
-           for word in set(new_w):
+           for word in sorted(list(set(new_w))):
                words.append(u'%s%s'%(word,pos))
            f_lines.append(u' '.join(words))
            #fout.write(u' '.join(words))
@@ -791,5 +792,116 @@ def test3():
                continue
            fout.write(u'%s\n'%line)
 
+'''
+def test4():
+    pos_map['d'] = 'd'
+    pos_map['dfb'] = 'm'
+    pos_map['di'] = 'f'
+    pos_map['cbb'] = 'c'
+    pos_map['a'] = 'b'
+    pos_map['vh'] = 'd'
+'''
+
+def test4():
+   en_word_re = re.compile(ur'[\u4e00-\u9fa5]+', re.I|re.U)
+   tagger = crfseg.Tagger()
+   pos_lines = []
+   with codecs.open('cwn_2', 'r', 'utf-8') as file:
+       for line in file:
+           new_line = []
+           for word in line.split():
+               try:
+                   w1 = en_word_re.match(word).group()
+                   if w1.strip() != '':
+                       new_line.append(w1)
+               except:
+                   print ' ERROR', word, 
+           l = ''
+           for p in tagger.pos(new_line):
+               l += "%s,%s "%(p[0],p[1])
+           pos_lines.append(l)
+   with codecs.open('cwn_3', 'w', 'utf-8') as file:
+       for pos_line in pos_lines:
+           file.write(pos_line+u'\n')
+
+def test5():
+   all_lines = []
+   i = 0
+   pos_info = {}
+   with codecs.open('cwn_3', 'r', 'utf-8') as file:
+       for line in file:
+           for word in line.split():
+               w1,w2 = word.split(',')
+               w = w1+w2
+               if w in pos_info:
+                   pos_info[w].append(i)
+               else:
+                   pos_info[w] = [i]
+           all_lines.append(line)
+           i += 1
+   with codecs.open('cwn_4', 'w', 'utf-8') as file:
+       for w,v in pos_info.iteritems():
+           '''
+           if len(v) > 1:
+               #ll = ' '.join([str(i) for i in v])
+               word_line = ' '.join([all_lines[vv] for vv in v])
+               word_line = ' '.join(set([w.strip() for w in word_line.split()]))
+               file.write(u'%s: \t[%s]\n'%(w, word_line.replace('\n','')))
+          '''
+           if len(v) == 1:
+               file.write(all_lines[v[0]])
+
+def test6():
+   i = 0
+   all_lines = []
+   word_count = {}
+   word_lines = {}
+   with codecs.open('cwn_3', 'r', 'utf-8') as file:
+       for line in file:
+           words = [w.strip() for w in line.split()]
+           word_line = u' '.join(sorted(words))
+           if word_line in word_lines:
+               continue
+           else:
+              word_lines[word_line] = 1
+              all_lines.append(word_line)
+
+   for line in all_lines:
+       for word in line.split():
+           word = word.split(',')[0]
+           if word in word_count:
+               word_count[word] += 1
+           else:
+               word_count[word] = 1;
+   new_lines = []
+
+   def find_lines(l):
+       for line in all_lines:
+           if l != line:
+               l_w = l.split()
+               line_w = set(line.split())
+               j = 0
+               for w in l_w:
+                   if w in line_w:
+                       j += 1
+               if j == len(l_w):
+                   return True
+       return False
+
+   with codecs.open('../cppjieba/cppjiebapy/dict/jieba.dict.utf8','r','utf-8') as file:
+       for line in file:
+           words = line.split()
+           w1 = words[0].strip()
+           w2 = int(words[1].strip())
+           if w1 in word_count:
+               word_count[w1] = w2
+
+   for line in all_lines:
+       if not find_lines(line):
+           words = sorted(line.split(), key=lambda x: word_count[x.split(',')[0]], reverse=True)
+           new_lines.append(u' '.join(words))
+   with codecs.open('cwn_4', 'w', 'utf-8') as file:
+       file.write(u'\n'.join(sorted(new_lines)))
+
 if __name__ == "__main__":
-   test3()
+   test6()

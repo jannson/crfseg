@@ -131,12 +131,15 @@ def train():
     #print model.most_similar(['女儿', '父亲'], ['男儿'], topn=3)
 
 def test():
-    model = word2vec.Word2Vec.load('./text8.model')
+    model = word2vec.Word2Vec.load('./origin/text8.model')
     #sims = model.most_similar(positive=[u'你们', u'你'], negative=[], topn=10)
-    sims = model.most_similar(positive=[u'中国ns', u'足球n'], negative=[u'日本ns'], topn=10)
-    #model.doesnt_match("breakfast cereal dinner lunch".split())
-    for sim in sims:
-        print sim[0], sim[1]
+    #sims = model.most_similar(positive=[u'中国ns', u'足球n'], negative=[u'日本ns'], topn=10)
+    #for sim in sims:
+    #    print sim[0], sim[1]
+    s = u'刚刚,d 甫,v 才,d 新,a 顷,n 刚,d 刚好,nr 正好,z 恰好,n 刚好,nr 恰好,nr 正好,z 刚刚,d 恰,d 刚好,nr 恰好,nr 正好,z 恰,d 刚好,nr 正好,z 恰好,n '
+    s = s.replace(',','')
+
+    print model.doesnt_match(s.split())
 
 '''
 for s in sogou_sents():

@@ -7,7 +7,7 @@ import os, re
 import codecs
 import logging
 import CRFPP
-
+#from trie import Trie
 
 def get_sentence_seg():
     cutlist = u" .[。，,！……*!《》<>\"':：？\?、\|“”‘’；]{}（）{}【】()｛｝（）：？！。，;、~——+％%`:“”＂'‘\n\r"
@@ -32,10 +32,41 @@ def create_model(seg_file=None, pos_file=None):
     pos_model = CRFPP.Model("-m %s" % pos_file)
     return (seg_model, pos_model)
 
+def create_syno_trie():
+    the_file = os.path.dirname(os.path.abspath(__file__))
+    syno_file = os.path.join(the_file,'data','synosynm.txt')
+    #trie = Trie()
+    dict = {}
+    with codecs.open(syno_file, 'r', 'utf-8') as file:
+        all_lines = file.read().split(u'\n')
+        for line in sorted(all_lines, key=lambda x:len(x), reverse=True):
+            words = []
+            for word in line.split():
+                w1,w2 = word.split(',')
+                words.append((w1.strip(), w2.strip()))
+            for word in words[1:]:
+                if not word in dict:
+                    dict[word] = words[0]
+    #for k,v in dict.iteritems():
+    #    trie[k] = v
+    #return trie
+    return dict
+
+def syno_word(trie, w):
+    v = w
+    while True:
+        if w in trie:
+            v = trie[w]
+            w = v
+        else:
+            break
+    return v
+
 # Share single CRF++ model
 (seg_model_global, pos_model_global) = create_model()
 sent_seg_global = get_sentence_seg()
 stop_words_global = get_stop_words()
+syno_trie_global = create_syno_trie()
 ascii_global = re.compile('(\d+)|([a-zA-Z]+)', re.I|re.U)
 space_global = re.compile('[\s\t\r\n]+', re.I|re.U)
 
@@ -145,12 +176,23 @@ class Tagger(object):
         toks = self.cut(txt)
         return self.pos(toks)
 
+    def cut_syno(self, txt):
+        toks = self.cut_pos(txt)
+        for t in toks:
+            print t[0], t[1]
+            if t[1] != 'w':
+                yield syno_word(syno_trie_global, t)[0]
+            else:
+                yield t[0]
+
     def cut_filter(self, txt, stopwords=stop_words_global):
         for x in self.cut(txt):
             if x not in stop_words_global:
                 yield x
 
-#tagger = Tagger()
-#for s in tagger.cut_filter(u'海运业雄踞全球之首 ，按吨位计占世界总数的１７％ 。'):
-#    print s,
-#print '\n'
+tagger = Tagger()
+stest = u'您们都跑哪里去玩了？最前面的那个地方是什么！您是谁，您想怎样? 高兴不！'
+print stest
+print u' '.join(list(tagger.cut_syno(stest)))
+print '\n'
+#print syno_word(syno_trie_global, (u'半点','m'))[0]
