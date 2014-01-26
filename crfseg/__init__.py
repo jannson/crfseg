@@ -179,7 +179,14 @@ class Tagger(object):
     def cut_syno(self, txt):
         toks = self.cut_pos(txt)
         for t in toks:
-            print t[0], t[1]
+            #print t[0], t[1]
+            if t[1] != 'w':
+                yield syno_word(syno_trie_global, t)[0]
+            else:
+                yield t[0]
+
+    def normal_words(self, words):
+        for t in self.pos(words):
             if t[1] != 'w':
                 yield syno_word(syno_trie_global, t)[0]
             else:
@@ -189,11 +196,12 @@ class Tagger(object):
         for x in self.cut(txt):
             if x not in stop_words_global:
                 yield x
-
+'''
 if __name__ == '__main__':
     tagger = Tagger()
-    stest = u'您们都跑哪里去玩了？最前面的那个地方是什么！您是谁，您想怎样? 高兴不！不错，我就是非常爱你！你这个人怎么这么讨厌'
+    stest = u'您们都跑哪里去玩了？最前面的那个地方 *  是什么！您是谁，您想怎样? 高兴不！不错，我就是非常爱你！你这个人怎么这么讨厌'
     print stest
-    print u' '.join(list(tagger.cut_syno(stest)))
+    #print u' '.join(list(tagger.cut_syno(stest)))
+    print u' '.join(list(tagger.normal_words(tagger.cut(stest))))
     print '\n'
-    print syno_word(syno_trie_global, (u'半点','m'))[0]
+'''
